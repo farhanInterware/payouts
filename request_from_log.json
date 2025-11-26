@@ -1,0 +1,49 @@
+{
+  "amount": "2",
+  "currency": "EUR",
+  "customer": {
+    "browser_info": {
+      "accept_header": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "color_depth": "24",
+      "java_enabled": false,
+      "javascript_enabled": true,
+      "language": "en-US",
+      "screen_height": 768,
+      "screen_width": 1366,
+      "timezone": "-300",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+    },
+    "email": "fasira@mailinator.com",
+    "id": "123",
+    "ip_address": "127.0.0.1"
+  },
+  "merchant": {
+    "custom_data": {},
+    "id": 85,
+    "links": {
+      "back_url": "/",
+      "callback_url": "/api/payment/callback",
+      "fail_url": "/payment/fail",
+      "processing_url": "/payment/processing",
+      "result_url": "/payment/result",
+      "success_url": "/payment/success"
+    }
+  },
+  "merchant_order_id": "order-1763380299",
+  "order_desc": "Irure Nam aut conseq",
+  "pay_method": "sepa",
+  "requisites": {
+    "account_name": "Evan Walls",
+    "account_number": "254",
+    "customer": {
+      "address": {
+        "address1": "687 Cowley Extension",
+        "country": "IT"
+      },
+      "first_name": "Glenna",
+      "last_name": "Hardy"
+    }
+  },
+  "signature": "892a5e8439c291e0310b2cdd6568734b7ad76f577c3d73f5d3519933ba68524b"
+}
+
