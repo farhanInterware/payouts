@@ -8,3 +8,19 @@
 [2025-11-26 10:49:28] local.INFO: Callback processed successfully {"transaction_id":4,"order_id":"cf1380196-698c-ddc8-0b68-581f5fdc0fb0","merchant_order_id":"test-order-1764154040","status":"approved"} 
 [2025-11-26 10:49:39] local.WARNING: Callback signature verification failed {"order_id":"cf1380196-698c-ddc8-0b68-581f5fdc0fb0","merchant_order_id":"test-order-1764154040"} 
 [2025-11-26 10:50:23] local.INFO: Callback processed successfully {"transaction_id":4,"order_id":"cf1380196-698c-ddc8-0b68-581f5fdc0fb0","merchant_order_id":"test-order-1764154040","status":"approved"} 
+[2025-11-26 10:57:44] local.ERROR: Command "key:generate." is not defined.
+
+Did you mean one of these?
+    event:generate
+    key:generate {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"key:generate.\" is not defined.
+
+Did you mean one of these?
+    event:generate
+    key:generate at C:\\xampp\\htdocs\\Debitly\\vendor\\symfony\\console\\Application.php:737)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Debitly\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('key:generate.')
+#1 C:\\xampp\\htdocs\\Debitly\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\Debitly\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\Debitly\\artisan(24): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 

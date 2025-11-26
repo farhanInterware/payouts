@@ -69,24 +69,6 @@
                 </div>
             </div>
 
-            <!-- Merchant Custom Data Section -->
-            <div class="mb-4">
-                <h5 class="mb-3 pb-2 border-bottom">
-                    <i class="bi bi-tags me-2 text-info"></i>Merchant Custom Data <span class="text-muted small">(Optional)</span>
-                </h5>
-                <div class="row g-3">
-                    <div class="col-12 col-md-6">
-                        <label class="form-label fw-semibold">Custom Property 1</label>
-                        <input type="text" name="merchant_custom_data[property1]" class="form-control" placeholder="e.g., string">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label class="form-label fw-semibold">Custom Property 2</label>
-                        <input type="text" name="merchant_custom_data[property2]" class="form-control" placeholder="e.g., string">
-                    </div>
-                </div>
-                <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Leave empty to send empty object {}</small>
-            </div>
-
             <!-- Customer Information Section -->
             <div class="mb-4">
                 <h5 class="mb-3 pb-2 border-bottom">
@@ -104,12 +86,6 @@
                             <i class="bi bi-envelope me-1"></i>Email <span class="text-danger">*</span>
                         </label>
                         <input type="email" name="customer[email]" class="form-control" placeholder="customer@example.com" required>
-                    </div>
-                        <div class="col-12 col-md-4">
-                        <label class="form-label fw-semibold">
-                            <i class="bi bi-geo-alt me-1"></i>IP Address <span class="text-danger">*</span>
-                        </label>
-                        <input type="text" name="customer[ip_address]" class="form-control" value="{{ request()->ip() }}" required>
                     </div>
                 </div>
             </div>
@@ -215,8 +191,8 @@ $(document).ready(function() {
             pay_method: $('select[name="pay_method"]').val(),
             customer: {
                 id: $('input[name="customer[id]"]').val(),
-                email: $('input[name="customer[email]"]').val(),
-                ip_address: $('input[name="customer[ip_address]"]').val()
+                email: $('input[name="customer[email]"]').val()
+                // IP address is automatically detected on the backend
             },
             requisites: {
                 account_number: $('input[name="requisites[account_number]"]').val(),
@@ -231,15 +207,6 @@ $(document).ready(function() {
                 }
             }
         };
-
-        // Add merchant_custom_data if provided
-        const customData1 = $('input[name="merchant_custom_data[property1]"]').val();
-        const customData2 = $('input[name="merchant_custom_data[property2]"]').val();
-        if (customData1 || customData2) {
-            formData.merchant_custom_data = {};
-            if (customData1) formData.merchant_custom_data.property1 = customData1;
-            if (customData2) formData.merchant_custom_data.property2 = customData2;
-        }
 
         // Add browser info
         formData.customer.browser_info = {

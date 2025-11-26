@@ -65,9 +65,30 @@ class PaymentController extends Controller
                 'requisites' => $request->requisites,
             ];
 
-            // Add browser info if available
-            if ($request->has('browser_info')) {
+            // Get client's real public IP address automatically
+            $ipAddress = $this->getClientIpAddress($request);
+            
+            // Ensure IP address is set in customer data
+            if (!isset($payload['customer']['ip_address']) || empty($payload['customer']['ip_address'])) {
+                $payload['customer']['ip_address'] = $ipAddress;
+            }
+            
+            // Add browser info - use provided or dummy values
+            if ($request->has('browser_info') && !empty($request->browser_info)) {
                 $payload['customer']['browser_info'] = $request->browser_info;
+            } else {
+                // Add dummy browser info if not provided
+                $payload['customer']['browser_info'] = [
+                    'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'accept_header' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                    'javascript_enabled' => true,
+                    'language' => 'en-US',
+                    'color_depth' => '24',
+                    'timezone' => '-300',
+                    'java_enabled' => false,
+                    'screen_height' => 1080,
+                    'screen_width' => 1920,
+                ];
             }
 
             // Ensure country code is uppercase (ISO codes must be uppercase)
@@ -75,16 +96,26 @@ class PaymentController extends Controller
                 $payload['requisites']['customer']['address']['country'] = strtoupper($payload['requisites']['customer']['address']['country']);
             }
 
-            // Add custom_data - API requires it, use empty object if not provided
+            // Add custom_data - use provided or dummy values
             if ($request->has('merchant_custom_data') && !empty($request->merchant_custom_data)) {
                 $payload['merchant']['custom_data'] = $request->merchant_custom_data;
             } else {
-                // API requires custom_data as object - use empty associative array
-                // This will be JSON encoded as {} (object) not [] (array)
-                $payload['merchant']['custom_data'] = [];
+                // Add dummy custom_data if not provided
+                $payload['merchant']['custom_data'] = [
+                    'property1' => 'dummy_value_1',
+                    'property2' => 'dummy_value_2',
+                ];
             }
 
+            // Log payload before signing (for debugging)
+            \Log::channel('api')->debug('Payload before signing', [
+                'payload' => $payload,
+                'custom_data_type' => gettype($payload['merchant']['custom_data']),
+                'custom_data_value' => $payload['merchant']['custom_data'],
+            ]);
+
             // Sign the request
+            // Note: recursiveSortAndClean will convert empty custom_data array to stdClass {}
             $signedJson = $this->paymentService->sign(json_encode($payload));
             $signedPayload = json_decode($signedJson, true);
 
@@ -97,6 +128,7 @@ class PaymentController extends Controller
                 'endpoint' => '/payout',
                 'method' => 'POST',
                 'json_string' => $signedJson,
+                'custom_data_in_json' => strpos($signedJson, '"custom_data":{}') !== false ? '{}' : (strpos($signedJson, '"custom_data":[]') !== false ? '[]' : 'not found'),
                 'timestamp' => now()->toIso8601String(),
             ]);
             LoggingService::logActivity('Payment', 'create_payout_request', [
@@ -646,6 +678,98 @@ class PaymentController extends Controller
             
             return redirect(config('payment.fail_url'))->with('error', 'An error occurred');
         }
+    }
+
+    /**
+     * Get client's real public IPv4 address
+     * Handles proxies, load balancers, and localhost scenarios
+     * Returns IPv4 address only (converts IPv6 if possible)
+     */
+    private function getClientIpAddress(Request $request): string
+    {
+        // Try to get IP from various headers (for proxies/load balancers)
+        $ipHeaders = [
+            'HTTP_CF_CONNECTING_IP',     // Cloudflare
+            'HTTP_X_REAL_IP',            // Nginx proxy
+            'HTTP_X_FORWARDED_FOR',      // Standard proxy header
+            'HTTP_X_FORWARDED',           // Alternative proxy header
+            'HTTP_X_CLUSTER_CLIENT_IP',  // Cluster
+            'HTTP_FORWARDED_FOR',        // Alternative
+            'HTTP_FORWARDED',            // Alternative
+        ];
+
+        foreach ($ipHeaders as $header) {
+            $ip = $request->server($header);
+            if ($ip) {
+                // X-Forwarded-For can contain multiple IPs, get the first one
+                $ips = explode(',', $ip);
+                $ip = trim($ips[0]);
+                
+                // Convert to IPv4 if needed
+                $ipv4 = $this->convertToIPv4($ip);
+                
+                // Validate IPv4 (must be public IP, not private/reserved)
+                if ($ipv4 && filter_var($ipv4, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 | FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)) {
+                    return $ipv4;
+                }
+            }
+        }
+
+        // Fallback to Laravel's ip() method
+        $ip = $request->ip();
+        
+        // Convert to IPv4
+        $ipv4 = $this->convertToIPv4($ip);
+        
+        // If localhost or invalid, use default for testing
+        if (!$ipv4 || in_array($ipv4, ['127.0.0.1', 'localhost']) || empty($ipv4)) {
+            // For local development, use a valid public IPv4 for testing
+            if (config('app.env') === 'local') {
+                return '8.8.8.8';
+            }
+            
+            // In production, log warning
+            Log::warning('Could not determine real client IPv4, using fallback', [
+                'original_ip' => $ip,
+                'ipv4' => $ipv4,
+                'headers' => $request->headers->all(),
+            ]);
+            
+            // Use fallback IPv4
+            return '8.8.8.8';
+        }
+
+        return $ipv4;
+    }
+
+    /**
+     * Convert IP address to IPv4 format
+     * Handles IPv6 to IPv4 conversion for mapped addresses
+     */
+    private function convertToIPv4(string $ip): ?string
+    {
+        // If already IPv4, return as is
+        if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+            return $ip;
+        }
+        
+        // If IPv6, try to extract IPv4 from mapped address (::ffff:192.168.1.1)
+        if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+            // Check if it's an IPv4-mapped IPv6 address (::ffff:x.x.x.x)
+            if (strpos($ip, '::ffff:') === 0) {
+                $ipv4 = substr($ip, 7);
+                if (filter_var($ipv4, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+                    return $ipv4;
+                }
+            }
+            
+            // For other IPv6 addresses, we can't convert them
+            // Return null to indicate conversion failed
+            return null;
+        }
+        
+        // Invalid IP format
+        return null;
     }
 }
 
