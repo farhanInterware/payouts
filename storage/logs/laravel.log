@@ -1,1 +1,10 @@
 
+[2025-11-26 10:47:21] local.ERROR: Call to undefined function curl_init() {"exception":"[object] (Error(code: 0): Call to undefined function curl_init() at C:\\xampp\\htdocs\\Debitly\\test_callback.php:180)
+[stacktrace]
+#0 {main}
+"} 
+[2025-11-26 10:48:56] local.ERROR: Callback: Invalid JSON received {"error":"No error","raw_content":""} 
+[2025-11-26 10:49:10] local.INFO: Callback processed successfully {"transaction_id":4,"order_id":"cf1380196-698c-ddc8-0b68-581f5fdc0fb0","merchant_order_id":"test-order-1764154040","status":"approved"} 
+[2025-11-26 10:49:28] local.INFO: Callback processed successfully {"transaction_id":4,"order_id":"cf1380196-698c-ddc8-0b68-581f5fdc0fb0","merchant_order_id":"test-order-1764154040","status":"approved"} 
+[2025-11-26 10:49:39] local.WARNING: Callback signature verification failed {"order_id":"cf1380196-698c-ddc8-0b68-581f5fdc0fb0","merchant_order_id":"test-order-1764154040"} 
+[2025-11-26 10:50:23] local.INFO: Callback processed successfully {"transaction_id":4,"order_id":"cf1380196-698c-ddc8-0b68-581f5fdc0fb0","merchant_order_id":"test-order-1764154040","status":"approved"} 

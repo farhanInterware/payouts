@@ -31,6 +31,11 @@ return [
     |--------------------------------------------------------------------------
     | Callback URLs
     |--------------------------------------------------------------------------
+    |
+    | These URLs are automatically built from APP_URL if not explicitly set.
+    | You only need to set APP_URL in your .env file, and these will be
+    | generated automatically. You can override individual URLs if needed.
+    |
     */
     
     'callback_url' => env('PAYMENT_CALLBACK_URL', env('APP_URL') . '/api/payment/callback'),
