@@ -123,7 +123,7 @@
     @if($users->hasPages())
         <div class="card-footer">
             <div class="d-flex justify-content-center">
-                {{ $users->appends(request()->query())->links() }}
+                {{ $users->withQueryString()->links() }}
             </div>
         </div>
     @endif

@@ -137,7 +137,7 @@
     @if($transactions->hasPages())
         <div class="card-footer">
             <div class="d-flex justify-content-center">
-                {{ $transactions->appends(request()->query())->links() }}
+                {{ $transactions->withQueryString()->links() }}
             </div>
         </div>
     @endif
