@@ -4,14 +4,9 @@
 
 @section('content')
 <div class="page-header">
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
-        <div>
-            <h2><i class="bi bi-speedometer2 me-2"></i>Dashboard</h2>
-            <p class="text-muted mb-0">Welcome back, {{ auth()->user()->name }}!</p>
-        </div>
-        <a href="{{ route('user.transactions.create') }}" class="btn btn-primary">
-            <i class="bi bi-plus-circle me-2"></i>New Transaction
-        </a>
+    <div>
+        <h2><i class="bi bi-speedometer2 me-2"></i>Dashboard</h2>
+        <p class="text-muted mb-0">Welcome back, {{ auth()->user()->name }}! Withdrawals are created by an administrator; you can review them under My Transactions.</p>
     </div>
 </div>
 
@@ -111,9 +106,7 @@
                                 <div class="empty-state">
                                     <i class="bi bi-inbox"></i>
                                     <p class="mb-0 mt-3">No transactions yet</p>
-                                    <a href="{{ route('user.transactions.create') }}" class="btn btn-primary mt-3">
-                                        <i class="bi bi-plus-circle me-2"></i>Create Your First Transaction
-                                    </a>
+                                    <p class="text-muted small mt-2 mb-0">Payouts will appear here once your administrator processes a withdrawal for you.</p>
                                 </div>
                             </td>
                         </tr>

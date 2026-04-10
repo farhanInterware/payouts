@@ -129,11 +129,8 @@
                 <h5 class="mb-0"><i class="bi bi-lightning-charge me-2"></i>Quick Actions</h5>
             </div>
             <div class="card-body">
-                <a href="{{ route('user.transactions.index') }}" class="btn btn-outline-primary w-100 mb-2">
+                <a href="{{ route('user.transactions.index') }}" class="btn btn-outline-primary w-100">
                     <i class="bi bi-list-ul me-2"></i>All Transactions
-                </a>
-                <a href="{{ route('user.transactions.create') }}" class="btn btn-primary w-100">
-                    <i class="bi bi-plus-circle me-2"></i>New Transaction
                 </a>
             </div>
         </div>

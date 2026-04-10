@@ -46,8 +46,8 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('user')->name('user.')->group(function () {
         Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
         
-        // Transactions
-        Route::resource('transactions', UserTransactionController::class);
+        // Transactions (view only — withdrawals are created by admins)
+        Route::resource('transactions', UserTransactionController::class)->only(['index', 'show']);
         Route::post('transactions/{id}/check-status', [UserTransactionController::class, 'checkStatus'])->name('transactions.check-status');
         
         // Profile

@@ -37,17 +37,6 @@ class TransactionController extends Controller
         return view('user.transactions.index', compact('transactions'));
     }
 
-    public function create()
-    {
-        return view('user.transactions.create');
-    }
-
-    public function store(Request $request)
-    {
-        $paymentController = new PaymentController();
-        return $paymentController->createPayout($request);
-    }
-
     public function show($id)
     {
         $transaction = auth()->user()->transactions()->findOrFail($id);

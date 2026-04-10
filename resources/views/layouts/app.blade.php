@@ -701,13 +701,7 @@
                 <li class="sidebar-menu-item">
                     <a href="{{ route('user.transactions.index') }}" class="sidebar-menu-link {{ request()->routeIs('user.transactions.index') || request()->routeIs('user.transactions.show') ? 'active' : '' }}">
                         <i class="bi bi-list-ul"></i>
-                        <span>All Transactions</span>
-                    </a>
-                </li>
-                <li class="sidebar-menu-item">
-                    <a href="{{ route('user.transactions.create') }}" class="sidebar-menu-link {{ request()->routeIs('user.transactions.create') ? 'active' : '' }}">
-                        <i class="bi bi-plus-circle"></i>
-                        <span>New Transaction</span>
+                        <span>My Transactions</span>
                     </a>
                 </li>
                 <li class="sidebar-menu-title">Account</li>

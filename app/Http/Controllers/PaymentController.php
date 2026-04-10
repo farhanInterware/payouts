@@ -37,6 +37,12 @@ class PaymentController extends Controller
      */
     public function createPayout(Request $request)
     {
+        abort_unless(
+            auth()->check() && auth()->user()->isAdmin(),
+            403,
+            'Only administrators can create withdrawals.'
+        );
+
         $request->validate([
             'order_desc' => 'required|string',
             'amount' => 'required|string',
@@ -56,9 +62,7 @@ class PaymentController extends Controller
         // This ensures uniqueness and prevents frontend manipulation
         $merchantOrderId = $this->generateUniqueMerchantOrderId();
 
-        // Find or create user from customer_email
-        // If user exists (by email), use that user; if not, create a new user
-        // This allows admin to create transactions for any user, and regular users to create for themselves
+        // Find or create user from customer_email (admin creates payouts on behalf of customers)
         $user = User::firstOrCreate(
             ['email' => $request->customer_email],
             [

@@ -4,14 +4,9 @@
 
 @section('content')
 <div class="page-header">
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
-        <div>
-            <h2><i class="bi bi-receipt-cutoff me-2"></i>My Transactions</h2>
-            <p class="text-muted mb-0">View and manage all your payment transactions</p>
-        </div>
-        <a href="{{ route('user.transactions.create') }}" class="btn btn-primary">
-            <i class="bi bi-plus-circle me-2"></i>New Transaction
-        </a>
+    <div>
+        <h2><i class="bi bi-receipt-cutoff me-2"></i>My Transactions</h2>
+        <p class="text-muted mb-0">Withdrawals initiated by your administrator appear here. You can view status and details only.</p>
     </div>
 </div>
 
@@ -122,9 +117,7 @@
                                             <i class="bi bi-arrow-left me-2"></i>Clear Filters
                                         </a>
                                     @else
-                                        <a href="{{ route('user.transactions.create') }}" class="btn btn-primary mt-3">
-                                            <i class="bi bi-plus-circle me-2"></i>Create Transaction
-                                        </a>
+                                        <p class="text-muted small mt-3 mb-0">No withdrawals yet. Your administrator will process payouts on your behalf.</p>
                                     @endif
                                 </div>
                             </td>

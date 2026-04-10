@@ -25,8 +25,8 @@
                     <a href="{{ route('user.dashboard') }}" class="btn btn-primary btn-lg">
                         <i class="bi bi-speedometer2 me-2"></i>Go to Dashboard
                     </a>
-                    <a href="{{ route('user.transactions.create') }}" class="btn btn-outline-primary">
-                        <i class="bi bi-plus-circle me-2"></i>Try Again
+                    <a href="{{ route('user.transactions.index') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-list-ul me-2"></i>My Transactions
                     </a>
                 </div>
             </div>
