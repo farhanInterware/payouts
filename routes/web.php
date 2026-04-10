@@ -21,12 +21,12 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-// Authentication routes
-Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
+// Authentication routes (guest only)
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
+});
 Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
-Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register']);
 
 // Payment result routes (public, no auth required)
 Route::post('/payment/result', [PaymentController::class, 'result'])->name('payment.result');
@@ -61,13 +61,11 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
     
     // Users
-    Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
-    Route::get('/users/{id}', [AdminUserController::class, 'show'])->name('users.show');
+    Route::resource('users', AdminUserController::class)->only(['index', 'create', 'store', 'show']);
     Route::post('/users/{id}/password', [AdminProfileController::class, 'changeUserPassword'])->name('users.password');
     
     // Transactions
-    Route::get('/transactions', [AdminTransactionController::class, 'index'])->name('transactions.index');
-    Route::get('/transactions/{id}', [AdminTransactionController::class, 'show'])->name('transactions.show');
+    Route::resource('transactions', AdminTransactionController::class)->only(['index', 'create', 'store', 'show']);
     
     // Profile
     Route::get('/profile', [AdminProfileController::class, 'show'])->name('profile.show');

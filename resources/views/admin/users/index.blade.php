@@ -3,9 +3,23 @@
 @section('title', 'Users')
 
 @section('content')
+@if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle me-2"></i>{{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
 <div class="page-header">
-    <h2><i class="bi bi-people me-2"></i>Users</h2>
-    <p class="text-muted mb-0">Manage all registered users</p>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+        <div>
+            <h2><i class="bi bi-people me-2"></i>Users</h2>
+            <p class="text-muted mb-0">Manage all registered users</p>
+        </div>
+        <a href="{{ route('admin.users.create') }}" class="btn btn-primary">
+            <i class="bi bi-person-plus me-2"></i>New User
+        </a>
+    </div>
 </div>
 
 <div class="card">

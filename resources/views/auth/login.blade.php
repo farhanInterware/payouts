@@ -65,16 +65,9 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
                         <i class="bi bi-box-arrow-in-right me-2"></i>Sign In
                     </button>
-
-                    <div class="text-center">
-                        <p class="mb-0 text-muted">
-                            Don't have an account? 
-                            <a href="{{ route('register') }}" class="text-decoration-none fw-semibold">Sign up here</a>
-                        </p>
-                    </div>
                 </form>
             </div>
         </div>

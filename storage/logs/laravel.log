@@ -24,3 +24,440 @@ Did you mean one of these?
 #3 C:\\xampp\\htdocs\\Debitly\\artisan(24): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #4 {main}
 "} 
+[2025-12-04 10:32:12] local.INFO: Auto-created user for transaction {"user_id":5,"email":"testuser@mailbox.com","created_by":1} 
+[2025-12-04 10:32:13] local.INFO: Callback processed successfully {"transaction_id":4,"order_id":"ca19e696-7fa8-44b0-a6af-9eb2c1bfe74f","merchant_order_id":"order-1764844290","status":"declined"} 
+[2025-12-04 10:33:02] local.INFO: Callback processed successfully {"transaction_id":5,"order_id":"ca194f21-7184-40ba-913d-398a6cdc6c16","merchant_order_id":"order-1764844353","status":"approved"} 
+[2025-12-04 11:03:25] local.INFO: Auto-created user for transaction {"user_id":6,"email":"Edreessalem.Maftah@mailer.lu","created_by":1} 
+[2025-12-04 11:04:27] local.INFO: Callback processed successfully {"transaction_id":6,"order_id":"ce1963b7-d7e5-42b1-903b-3d950633d091","merchant_order_id":"order-1764845964","status":"approved"} 
+[2025-12-04 11:28:31] local.INFO: Auto-created user for transaction {"user_id":7,"email":"Glauco.Gavina@mailer.lu","created_by":1} 
+[2025-12-04 11:29:33] local.INFO: Callback processed successfully {"transaction_id":7,"order_id":"ce195aea-aba2-48d1-9aad-44ccf7c6b398","merchant_order_id":"order-1764846855","status":"approved"} 
+[2025-12-04 13:35:26] local.INFO: Auto-created user for transaction {"user_id":8,"email":"TiberioAntonino.Zen@mailer.lu","created_by":1} 
+[2025-12-04 13:35:32] local.INFO: Callback processed successfully {"transaction_id":8,"order_id":"ce19df2b-7f2b-487c-8fe6-e38ac90b6c3e","merchant_order_id":"order-1764848652","status":"approved"} 
+[2025-12-04 13:42:06] local.INFO: Auto-created user for transaction {"user_id":9,"email":"Massimo.Mosca@mailer.lu","created_by":1} 
+[2025-12-04 13:43:08] local.INFO: Callback processed successfully {"transaction_id":9,"order_id":"ce190060-5541-4a01-9cdc-5525fafb67e6","merchant_order_id":"order-1764855531","status":"approved"} 
+[2025-12-04 13:50:11] local.INFO: Auto-created user for transaction {"user_id":10,"email":"GIORGIO.BORGHI@mailer.lu","created_by":1} 
+[2025-12-04 14:13:16] local.INFO: Auto-created user for transaction {"user_id":11,"email":"giorgio.borghi@mailer.lu","created_by":1} 
+[2025-12-04 14:16:43] local.INFO: Auto-created user for transaction {"user_id":12,"email":"giorgio.borghi@mailer.lu","created_by":1} 
+[2025-12-04 14:17:45] local.INFO: Callback processed successfully {"transaction_id":10,"order_id":"ce1973a1-45fb-4cc5-b0f5-871c288d4774","merchant_order_id":"order-1764857675","status":"approved"} 
+[2025-12-05 10:08:38] local.INFO: Auto-created user for transaction {"user_id":13,"email":"carlosmario.bocanegrasoto@mailer.lu","created_by":1} 
+[2025-12-05 10:09:40] local.INFO: Callback processed successfully {"transaction_id":11,"order_id":"ce198c8b-9f48-4b62-86ef-16ff065617df","merchant_order_id":"order-1764927599","status":"approved"} 
+[2025-12-05 14:44:20] local.INFO: Auto-created user for transaction {"user_id":14,"email":"antoniojavier.ortegabuendia@mailer.lu","created_by":1} 
+[2025-12-05 14:45:22] local.INFO: Callback processed successfully {"transaction_id":12,"order_id":"ce1962d0-f914-4532-a08f-fa90b23e32b9","merchant_order_id":"order-1764945555","status":"approved"} 
+[2025-12-09 08:40:53] local.INFO: Auto-created user for transaction {"user_id":15,"email":"MatsDennisBorg.Goete@mailer.lu","created_by":1} 
+[2025-12-09 08:41:56] local.INFO: Callback processed successfully {"transaction_id":13,"order_id":"ce1964a9-38a2-45f4-aae5-6bac313e7389","merchant_order_id":"order-1765268797","status":"approved"} 
+[2025-12-09 08:50:32] local.INFO: Auto-created user for transaction {"user_id":16,"email":"ClaesErik.Henningsohn@mailer.lu","created_by":1} 
+[2025-12-09 08:51:34] local.INFO: Callback processed successfully {"transaction_id":14,"order_id":"ce19f0e6-5295-4ded-a9f9-bb0bf4b3b7e5","merchant_order_id":"order-1765269814","status":"approved"} 
+[2025-12-09 11:19:52] local.INFO: Callback processed successfully {"transaction_id":15,"order_id":"ce19dcc8-54f9-45e1-8a23-9885608641f8","merchant_order_id":"order-1765278859","status":"approved"} 
+[2025-12-09 18:06:15] local.INFO: Auto-created user for transaction {"user_id":17,"email":"JoseManuel.GomezSolis@mailer.lu","created_by":1} 
+[2025-12-09 18:07:19] local.INFO: Callback processed successfully {"transaction_id":16,"order_id":"ce199bb5-b396-4c23-8754-f54063a4aa53","merchant_order_id":"order-1765303395","status":"approved"} 
+[2025-12-10 11:36:26] local.INFO: Auto-created user for transaction {"user_id":18,"email":"cristobal.maringarcia@gmail.com","created_by":1} 
+[2025-12-10 11:37:29] local.INFO: Callback processed successfully {"transaction_id":17,"order_id":"ce19c3f5-9505-434b-b39c-dfb41092aeb6","merchant_order_id":"order-1765366352","status":"approved"} 
+[2025-12-10 11:45:02] local.INFO: Auto-created user for transaction {"user_id":19,"email":"isabel.alarconflores@gmail.com","created_by":1} 
+[2025-12-10 11:46:07] local.INFO: Callback processed successfully {"transaction_id":18,"order_id":"ce19142c-7fbb-4880-87ba-8a57e7df9e87","merchant_order_id":"order-1765366935","status":"approved"} 
+[2025-12-10 12:51:06] local.INFO: Auto-created user for transaction {"user_id":20,"email":"diegoarmando.roseromena@mailer.lu","created_by":1} 
+[2025-12-10 12:52:09] local.INFO: Callback processed successfully {"transaction_id":19,"order_id":"ce198456-26a2-4a3c-8ff0-aeb360321b70","merchant_order_id":"order-1765368091","status":"approved"} 
+[2025-12-10 13:03:09] local.INFO: Auto-created user for transaction {"user_id":21,"email":"ClaudioItalico.Frigieri@mailer.lu","created_by":1} 
+[2025-12-10 13:04:12] local.INFO: Callback processed successfully {"transaction_id":20,"order_id":"ce194653-d9b9-436a-a1a3-1de4dfade8ed","merchant_order_id":"order-1765371470","status":"approved"} 
+[2025-12-10 13:36:53] local.INFO: Auto-created user for transaction {"user_id":22,"email":"Monica.Bossi@mailer.lu","created_by":1} 
+[2025-12-10 13:37:56] local.INFO: Callback processed successfully {"transaction_id":21,"order_id":"ce195673-cf8f-40e3-850f-b31313dbd41d","merchant_order_id":"order-1765373512","status":"approved"} 
+[2025-12-10 14:43:35] local.INFO: Auto-created user for transaction {"user_id":23,"email":"Claudio.Caso@mailer.lu","created_by":1} 
+[2025-12-10 14:44:38] local.INFO: Callback processed successfully {"transaction_id":22,"order_id":"ce1922df-3311-4fba-858e-051f2a44af34","merchant_order_id":"order-1765377272","status":"approved"} 
+[2025-12-10 16:06:54] local.INFO: Auto-created user for transaction {"user_id":24,"email":"Antonio.Patrone@mailer.lu","created_by":1} 
+[2025-12-10 16:07:58] local.INFO: Callback processed successfully {"transaction_id":23,"order_id":"ce19c332-a3c9-425b-aab8-7236c27cf374","merchant_order_id":"order-1765377971","status":"approved"} 
+[2025-12-10 17:25:28] local.INFO: Auto-created user for transaction {"user_id":25,"email":"Aldo.DiPegna@mailer.lu","created_by":1} 
+[2025-12-10 17:26:31] local.INFO: Callback processed successfully {"transaction_id":24,"order_id":"ce1961e5-25fd-477d-96f4-032eb9ba81a8","merchant_order_id":"order-1765387284","status":"approved"} 
+[2025-12-11 14:24:39] local.INFO: Auto-created user for transaction {"user_id":26,"email":"jorgeluis.montoroasin@mailer.lu","created_by":1} 
+[2025-12-11 14:24:47] local.INFO: Callback processed successfully {"transaction_id":25,"order_id":"ce192121-418d-44cb-b0ef-6340b055afb5","merchant_order_id":"order-1765462657","status":"approved"} 
+[2025-12-15 09:49:40] local.INFO: Auto-created user for transaction {"user_id":27,"email":"Massimo.Chiarini@mailer.lu","created_by":1} 
+[2025-12-15 09:50:44] local.INFO: Callback processed successfully {"transaction_id":26,"order_id":"ce195edb-3ecf-4f66-9bc3-bc979da92e38","merchant_order_id":"order-1765791655","status":"approved"} 
+[2025-12-15 10:16:57] local.INFO: Auto-created user for transaction {"user_id":28,"email":"Ivo.Galliano@mailer.lu","created_by":1} 
+[2025-12-15 10:18:00] local.INFO: Callback processed successfully {"transaction_id":27,"order_id":"ce196e2e-27c9-4eea-8733-5ca5312e62fa","merchant_order_id":"order-1765792704","status":"approved"} 
+[2025-12-15 14:37:34] local.INFO: Auto-created user for transaction {"user_id":29,"email":"Endri.bubeqi@mailer.lu","created_by":1} 
+[2025-12-15 14:38:36] local.INFO: Callback processed successfully {"transaction_id":28,"order_id":"ce1906c7-5ec0-44f3-bcec-22a8c423efb9","merchant_order_id":"order-1765809154","status":"approved"} 
+[2025-12-16 16:06:25] local.INFO: Auto-created user for transaction {"user_id":30,"email":"StenGunnarChristian.Boo@mailer.lu","created_by":1} 
+[2025-12-16 16:07:28] local.INFO: Callback processed successfully {"transaction_id":29,"order_id":"ce19d321-67b1-4f3a-87a7-2892b69878fd","merchant_order_id":"order-1765899964","status":"approved"} 
+[2025-12-17 14:01:59] local.INFO: Auto-created user for transaction {"user_id":31,"email":"dario.morandotti@mailer.lu","created_by":1} 
+[2025-12-17 14:03:02] local.INFO: Callback processed successfully {"transaction_id":30,"order_id":"ce19d70f-f1c7-4a49-823c-49d5664cf8cc","merchant_order_id":"order-1765979718","status":"approved"} 
+[2025-12-17 15:26:12] local.INFO: Auto-created user for transaction {"user_id":32,"email":"enrique.blazquezlozano@mailer.lu","created_by":1} 
+[2025-12-17 15:27:15] local.INFO: Callback processed successfully {"transaction_id":31,"order_id":"ce19b7d7-e50a-402f-b6d3-99003860fdbd","merchant_order_id":"order-1765984656","status":"approved"} 
+[2025-12-18 11:57:19] local.INFO: Auto-created user for transaction {"user_id":33,"email":"giuseppe.cappello@mailer.lu","created_by":1} 
+[2025-12-18 11:58:22] local.INFO: Callback processed successfully {"transaction_id":32,"order_id":"ce190e9e-1e0b-466d-8c5b-c625b4699e02","merchant_order_id":"order-1766058597","status":"approved"} 
+[2025-12-19 12:01:50] local.INFO: Auto-created user for transaction {"user_id":34,"email":"lidia.grandearrufat@mailer.lu","created_by":1} 
+[2025-12-19 12:02:53] local.INFO: Callback processed successfully {"transaction_id":33,"order_id":"ce19a161-257e-435d-be21-3e7957fae5a1","merchant_order_id":"order-1766143223","status":"approved"} 
+[2025-12-19 12:25:53] local.INFO: Auto-created user for transaction {"user_id":35,"email":"runejohannes.eriksson@mailer.lu","created_by":1} 
+[2025-12-19 12:26:56] local.INFO: Callback processed successfully {"transaction_id":34,"order_id":"ce1903b1-c24f-4edf-894f-3b28c2499399","merchant_order_id":"order-1766146239","status":"approved"} 
+[2025-12-19 12:35:15] local.INFO: Auto-created user for transaction {"user_id":36,"email":"pietro.roscitano@mailer.lu","created_by":1} 
+[2025-12-19 12:36:18] local.INFO: Callback processed successfully {"transaction_id":35,"order_id":"ce19dc5d-2a10-44a7-864e-9332c63292d4","merchant_order_id":"order-1766147455","status":"approved"} 
+[2025-12-19 15:13:22] local.INFO: Auto-created user for transaction {"user_id":37,"email":"goetematsdennis.borg@mailer.lu","created_by":1} 
+[2025-12-19 15:14:25] local.INFO: Callback processed successfully {"transaction_id":36,"order_id":"ce197ff0-bf9b-47bf-b640-67644e4e8b83","merchant_order_id":"order-1766156706","status":"approved"} 
+[2025-12-23 10:21:55] local.INFO: Auto-created user for transaction {"user_id":38,"email":"ottaviano.brambilla@mailer.lu","created_by":1} 
+[2025-12-23 10:23:00] local.INFO: Callback processed successfully {"transaction_id":37,"order_id":"ce197413-a7f5-4f25-94f6-7b9747705f4b","merchant_order_id":"order-1766483065","status":"approved"} 
+[2025-12-29 12:18:20] local.INFO: Auto-created user for transaction {"user_id":39,"email":"simona.gasbarri@mailer.lu","created_by":1} 
+[2025-12-29 12:18:21] local.INFO: Callback processed successfully {"transaction_id":38,"order_id":"ce19a1ce-c44f-4306-b5e9-53b80ce40338","merchant_order_id":"order-1767010178","status":"declined"} 
+[2025-12-30 09:45:49] local.INFO: Callback processed successfully {"transaction_id":39,"order_id":"ce19a8c7-159a-4fae-8454-c7a2cfca68ea","merchant_order_id":"order-1767087592","status":"approved"} 
+[2026-01-07 17:16:06] local.INFO: Auto-created user for transaction {"user_id":40,"email":"giuseppe.abate@mailer.lu","created_by":1} 
+[2026-01-07 17:17:09] local.INFO: Callback processed successfully {"transaction_id":40,"order_id":"ce194c0b-84eb-41c3-9cc7-e28c6afe1279","merchant_order_id":"order-1767805726","status":"approved"} 
+[2026-01-08 09:33:49] local.INFO: Auto-created user for transaction {"user_id":41,"email":"paolo.lui@mailer.lu","created_by":1} 
+[2026-01-08 09:34:52] local.INFO: Callback processed successfully {"transaction_id":41,"order_id":"ce1943e9-8cff-490f-b745-feec48513b83","merchant_order_id":"order-1767864573","status":"approved"} 
+[2026-01-08 09:40:44] local.INFO: Auto-created user for transaction {"user_id":42,"email":"gianfranco.puddu@mailer.lu","created_by":1} 
+[2026-01-08 09:41:47] local.INFO: Callback processed successfully {"transaction_id":42,"order_id":"ce19b39f-21c0-48c4-8d60-76809f3e9672","merchant_order_id":"order-1767864999","status":"approved"} 
+[2026-01-08 09:55:28] local.INFO: Callback processed successfully {"transaction_id":43,"order_id":"ce1928f0-3f78-46b8-b4a4-49497edb3dd9","merchant_order_id":"order-1767865490","status":"approved"} 
+[2026-01-08 11:40:39] local.INFO: Auto-created user for transaction {"user_id":43,"email":"emanuela.ferrarilli@mailer.lu","created_by":1} 
+[2026-01-08 11:41:42] local.INFO: Callback processed successfully {"transaction_id":44,"order_id":"ce19d916-3ce6-4ffc-85fd-03d3594586f5","merchant_order_id":"order-1767872112","status":"approved"} 
+[2026-01-08 13:16:24] local.INFO: Auto-created user for transaction {"user_id":44,"email":"pedromiguel.quilesmingot@mailer.lu","created_by":1} 
+[2026-01-08 13:17:26] local.INFO: Callback processed successfully {"transaction_id":45,"order_id":"ce1912d0-fb9f-457e-97c5-e8f97bdea731","merchant_order_id":"order-1767876865","status":"approved"} 
+[2026-01-08 16:25:26] local.INFO: Auto-created user for transaction {"user_id":45,"email":"Monica.SanjuanAlos@mailer.lu","created_by":1} 
+[2026-01-08 16:26:29] local.INFO: Callback processed successfully {"transaction_id":46,"order_id":"ce198c33-0faf-4cc2-840d-b7c90c5b93d2","merchant_order_id":"order-1767889110","status":"approved"} 
+[2026-01-09 11:24:58] local.INFO: Auto-created user for transaction {"user_id":46,"email":"graziano.d'amario@mailer.lu","created_by":1} 
+[2026-01-09 11:26:02] local.INFO: Callback processed successfully {"transaction_id":47,"order_id":"ce194061-2f38-4bec-850f-80a474049403","merchant_order_id":"order-1767956725","status":"approved"} 
+[2026-01-12 09:42:00] local.INFO: Callback processed successfully {"transaction_id":48,"order_id":"ce1927ca-ccb8-42e4-b99f-4b9f305075fa","merchant_order_id":"order-1768210482","status":"approved"} 
+[2026-01-13 12:58:08] local.INFO: Auto-created user for transaction {"user_id":47,"email":"Francesco.Calderaro@mailer.lu","created_by":1} 
+[2026-01-13 12:58:35] local.INFO: Callback processed successfully {"transaction_id":49,"order_id":"ce194c16-dbdd-4c9b-8af3-02dba1428e09","merchant_order_id":"order-1768308504","status":"declined"} 
+[2026-01-13 13:11:04] local.INFO: Callback processed successfully {"transaction_id":50,"order_id":"ce19cb74-be15-414c-b2c2-57d4e446dd06","merchant_order_id":"order-1768309733","status":"approved"} 
+[2026-01-13 13:43:03] local.INFO: Callback processed successfully {"transaction_id":51,"order_id":"ce191671-48ad-4fea-8cc2-b74549cc9896","merchant_order_id":"order-1768311286","status":"approved"} 
+[2026-01-14 10:26:19] local.INFO: Callback processed successfully {"transaction_id":52,"order_id":"ce190966-26e1-4a52-8062-5a6207e91d9f","merchant_order_id":"order-1768386053","status":"approved"} 
+[2026-01-14 15:50:21] local.INFO: Auto-created user for transaction {"user_id":48,"email":"dimitri.bogoiavlensky@mailer.lu","created_by":1} 
+[2026-01-14 15:51:24] local.INFO: Callback processed successfully {"transaction_id":53,"order_id":"ce1972bb-86bf-4a3f-a39e-9fc0b093130a","merchant_order_id":"order-1768405610","status":"approved"} 
+[2026-01-15 16:58:37] local.INFO: Auto-created user for transaction {"user_id":49,"email":"brittanngret.rasmark@mailer.lu","created_by":1} 
+[2026-01-15 16:58:37] local.INFO: Callback processed successfully {"transaction_id":54,"order_id":"ce19b6b1-9b41-4d5c-82d2-408746729088","merchant_order_id":"order-1768495992","status":"declined"} 
+[2026-01-15 17:01:34] local.INFO: Callback processed successfully {"transaction_id":55,"order_id":"ce19f1fb-76cd-4d67-9dbd-4acc189e37de","merchant_order_id":"order-1768496389","status":"declined"} 
+[2026-01-16 13:35:33] local.INFO: Callback processed successfully {"transaction_id":56,"order_id":"ce1997c8-3a06-4a99-a211-a6aff594be16","merchant_order_id":"order-1768570385","status":"declined"} 
+[2026-01-16 13:49:39] local.INFO: Callback processed successfully {"transaction_id":57,"order_id":"ce19f6b7-04c0-4cf1-b840-b5cb4661d054","merchant_order_id":"order-1768571241","status":"approved"} 
+[2026-01-16 13:53:22] local.INFO: Callback processed successfully {"transaction_id":58,"order_id":"ce198bba-6c72-43c6-8e1d-2aa739a83dc2","merchant_order_id":"order-1768571466","status":"approved"} 
+[2026-01-19 11:19:55] local.INFO: Auto-created user for transaction {"user_id":50,"email":"daniel.roistrastoy@mailer.lu","created_by":1} 
+[2026-01-19 11:19:55] local.WARNING: Callback: Transaction not found {"order_id":"ce190ea1-ca56-44d4-aa95-7d3dde5c684d","merchant_order_id":"order-1768820964"} 
+[2026-01-19 11:27:15] local.WARNING: Callback: Transaction not found {"order_id":"ce192079-b86a-4198-8ea5-eb1aaa6c1c4c","merchant_order_id":"order-1768821976"} 
+[2026-01-19 15:53:02] local.INFO: Callback processed successfully {"transaction_id":59,"order_id":"ce1918ed-c910-470b-a323-1f43f530e238","merchant_order_id":"order-1768837854","status":"approved"} 
+[2026-01-19 16:05:33] local.INFO: Auto-created user for transaction {"user_id":51,"email":"Domenico.Lullo@mailer.lu","created_by":1} 
+[2026-01-19 16:06:36] local.INFO: Callback processed successfully {"transaction_id":60,"order_id":"ce19fddb-f0e3-4b0b-b7ef-cbb206fd9503","merchant_order_id":"order-1768838220","status":"approved"} 
+[2026-01-19 16:38:25] local.INFO: Callback processed successfully {"transaction_id":61,"order_id":"ce191041-b866-4483-b85a-4064643d7de7","merchant_order_id":"order-1768839212","status":"approved"} 
+[2026-01-19 17:30:31] local.INFO: Callback processed successfully {"transaction_id":20,"order_id":"ce194653-d9b9-436a-a1a3-1de4dfade8ed","merchant_order_id":"order-1765371470","status":"declined"} 
+[2026-01-20 11:49:50] local.INFO: Auto-created user for transaction {"user_id":52,"email":"bengtjanove.hallerhed@mailer.lu","created_by":1} 
+[2026-01-20 11:50:04] local.INFO: Callback processed successfully {"transaction_id":62,"order_id":"ce190c29-c0af-42b4-956a-71649a5397e8","merchant_order_id":"order-1768909495","status":"approved"} 
+[2026-01-20 11:52:14] local.INFO: Callback processed successfully {"transaction_id":63,"order_id":"ce1929f3-fe84-4cec-98ef-29c066085504","merchant_order_id":"order-1768909822","status":"approved"} 
+[2026-01-20 16:49:44] local.INFO: Callback processed successfully {"transaction_id":64,"order_id":"ce190e4b-0de5-41e6-ae6b-847281f9dbef","merchant_order_id":"order-1768927334","status":"approved"} 
+[2026-01-20 17:13:12] local.INFO: Auto-created user for transaction {"user_id":53,"email":"Giovanni.Tucciarone@mailer.lu","created_by":1} 
+[2026-01-20 17:14:16] local.INFO: Callback processed successfully {"transaction_id":65,"order_id":"ce198f0e-855d-4e5b-be21-207025c66170","merchant_order_id":"order-1768928434","status":"approved"} 
+[2026-01-21 10:01:57] local.INFO: Callback processed successfully {"transaction_id":66,"order_id":"ce19c767-ad95-4992-8a64-d7bcc872f7a8","merchant_order_id":"order-1768989404","status":"approved"} 
+[2026-01-21 10:11:42] local.INFO: Auto-created user for transaction {"user_id":54,"email":"alessandro.Iannello@mailer.lu","created_by":1} 
+[2026-01-21 10:12:45] local.INFO: Callback processed successfully {"transaction_id":67,"order_id":"ce1958f8-fc01-48e1-b44e-152e96ce3486","merchant_order_id":"order-1768989999","status":"approved"} 
+[2026-01-23 15:30:29] local.INFO: Auto-created user for transaction {"user_id":55,"email":"FranciscoJavier.RodriguezPerea@mailer.lu","created_by":1} 
+[2026-01-23 15:31:33] local.INFO: Callback processed successfully {"transaction_id":68,"order_id":"ce19a093-5196-45e6-b5ef-0c2ada52ab54","merchant_order_id":"order-1769181895","status":"approved"} 
+[2026-01-23 15:40:22] local.INFO: Auto-created user for transaction {"user_id":56,"email":"JerrySigvard.Rosen@mailer.lu","created_by":1} 
+[2026-01-23 15:40:22] local.WARNING: Callback: Transaction not found {"order_id":"ce19ff1a-7546-40b8-a38c-4d09fb074f92","merchant_order_id":"order-1769182568"} 
+[2026-01-26 11:12:14] local.WARNING: Callback: Transaction not found {"order_id":"ce199520-2ba8-4d0a-aacf-28a07bad8eef","merchant_order_id":"order-1769425412"} 
+[2026-01-26 11:19:57] local.INFO: Auto-created user for transaction {"user_id":57,"email":"GeirLasse.Winaas@mailer.lu","created_by":1} 
+[2026-01-26 11:22:20] local.WARNING: Callback: Transaction not found {"order_id":"ce197988-6ae9-4168-9ef1-5b01dddd031b","merchant_order_id":"order-1769426477"} 
+[2026-01-26 12:17:43] local.WARNING: Callback: Transaction not found {"order_id":"ce19fa9d-a89a-4c08-b35e-3d133d40c877","merchant_order_id":"order-1769429766"} 
+[2026-01-26 13:14:53] local.INFO: Callback processed successfully {"transaction_id":70,"order_id":"ce196a9d-ca1c-40ef-b556-4b4f3d478178","merchant_order_id":"order-1769433292-697768cc73d6a","status":"declined"} 
+[2026-01-26 13:15:09] local.INFO: Callback processed successfully {"transaction_id":71,"order_id":"ce192a30-ff92-4e32-a9b1-130b23caa188","merchant_order_id":"order-1769433309-697768dd65961","status":"declined"} 
+[2026-01-26 13:16:22] local.INFO: Callback processed successfully {"transaction_id":72,"order_id":"ce193354-c41b-4e77-98ac-7c631f5eb881","merchant_order_id":"order-1769433381-6977692587d60","status":"declined"} 
+[2026-01-26 13:16:41] local.INFO: Callback processed successfully {"transaction_id":73,"order_id":"ce19d4de-af1c-4066-a331-e0e6a8a7cfc9","merchant_order_id":"order-1769433400-69776938eaf1c","status":"declined"} 
+[2026-01-26 13:25:47] local.INFO: Callback processed successfully {"transaction_id":74,"order_id":"ce196c8f-9edf-44fe-a226-cbd410524095","merchant_order_id":"order-1769433946-69776b5ab2d68","status":"declined"} 
+[2026-01-26 13:29:30] local.INFO: Callback processed successfully {"transaction_id":75,"order_id":"ce194032-552f-47fd-aa52-c5f1bb0c50f4","merchant_order_id":"order-1769434170-69776c3a5db82","status":"declined"} 
+[2026-01-26 13:30:03] local.INFO: Callback processed successfully {"transaction_id":76,"order_id":"ce194770-39e7-493b-b8fb-55b965364234","merchant_order_id":"order-1769434202-69776c5a1e420","status":"declined"} 
+[2026-01-26 13:30:44] local.INFO: Callback processed successfully {"transaction_id":77,"order_id":"ce193e25-80d0-4a7c-a10a-f76826c6bb02","merchant_order_id":"order-1769434244-69776c8410c0e","status":"declined"} 
+[2026-01-26 13:34:16] local.INFO: Callback processed successfully {"transaction_id":78,"order_id":"ce19d0e6-ae75-457f-b581-056b4231dd2f","merchant_order_id":"order-1769434456-69776d580fe04","status":"declined"} 
+[2026-01-26 13:42:58] local.INFO: Callback processed successfully {"transaction_id":79,"order_id":"ce199238-0020-4f97-b62f-719ea9315cfe","merchant_order_id":"order-1769434977-69776f61e7f71","status":"declined"} 
+[2026-01-26 13:43:18] local.INFO: Callback processed successfully {"transaction_id":80,"order_id":"ce1940af-f11a-49b7-aec8-cfd0d883ce12","merchant_order_id":"order-1769434997-69776f758dfd5","status":"declined"} 
+[2026-01-26 13:43:35] local.INFO: Callback processed successfully {"transaction_id":81,"order_id":"ce192215-47a8-4a29-960a-da9bb1578e84","merchant_order_id":"order-1769435014-69776f867441e","status":"declined"} 
+[2026-01-26 13:43:44] local.INFO: Callback processed successfully {"transaction_id":82,"order_id":"ce199391-7219-4058-a626-7880a32e12ff","merchant_order_id":"order-1769435023-69776f8fc56ef","status":"declined"} 
+[2026-01-26 13:43:53] local.INFO: Callback processed successfully {"transaction_id":83,"order_id":"ce190b04-3035-40a2-ac05-b9539fdb88d0","merchant_order_id":"order-1769435033-69776f9907a2a","status":"declined"} 
+[2026-01-27 14:07:20] local.INFO: Callback processed successfully {"transaction_id":84,"order_id":"ce191d17-7c26-490a-b6d7-60fe0fbf2a51","merchant_order_id":"order-1769522840-6978c6984cec6","status":"declined"} 
+[2026-01-27 14:07:34] local.INFO: Callback processed successfully {"transaction_id":85,"order_id":"ce19a346-5115-4b4d-af26-ee0b2e2176fa","merchant_order_id":"order-1769522854-6978c6a64dbfd","status":"declined"} 
+[2026-01-27 14:07:44] local.INFO: Callback processed successfully {"transaction_id":86,"order_id":"ce19c923-0a8d-4870-b52c-fcf168cc5255","merchant_order_id":"order-1769522863-6978c6af83dcc","status":"declined"} 
+[2026-01-27 14:08:37] local.INFO: Callback processed successfully {"transaction_id":87,"order_id":"ce19258f-9e9d-4d43-9357-b96b89a097dd","merchant_order_id":"order-1769522916-6978c6e4b113a","status":"declined"} 
+[2026-01-27 14:43:16] local.INFO: Callback processed successfully {"transaction_id":88,"order_id":"ce191de5-340b-43ca-8b1a-a1ed04b368d6","merchant_order_id":"order-1769524933-6978cec58ecb8","status":"approved"} 
+[2026-01-27 14:46:51] local.INFO: Callback processed successfully {"transaction_id":89,"order_id":"ce197ba5-5e51-4eb2-87a7-f32ea5075d0f","merchant_order_id":"order-1769525148-6978cf9c1da64","status":"approved"} 
+[2026-01-27 15:59:57] local.INFO: Callback processed successfully {"transaction_id":90,"order_id":"ce192005-502c-4e83-b342-e2732e772efa","merchant_order_id":"order-1769529534-6978e0be2c89f","status":"approved"} 
+[2026-01-28 09:57:07] local.INFO: Callback processed successfully {"transaction_id":94,"order_id":"ce198132-090b-4b5f-b3a6-eb48df90bed6","merchant_order_id":"order-1769594164-6979dd3450dba","status":"approved"} 
+[2026-01-30 16:37:53] local.INFO: Callback processed successfully {"transaction_id":95,"order_id":"ce19a447-b2b9-4973-b97c-81453d6843bf","merchant_order_id":"order-1769791009-697cde21ca7ff","status":"approved"} 
+[2026-02-02 16:27:32] local.INFO: Callback processed successfully {"transaction_id":96,"order_id":"ce198bf4-c936-46ac-8185-601c72be85d3","merchant_order_id":"order-1770049589-6980d0359799c","status":"approved"} 
+[2026-02-02 17:21:13] local.INFO: Callback processed successfully {"transaction_id":97,"order_id":"ce19f8b7-0c8b-4c2a-bef6-f3539eb2a65d","merchant_order_id":"order-1770052808-6980dcc8ef036","status":"approved"} 
+[2026-02-02 17:28:02] local.INFO: Callback processed successfully {"transaction_id":98,"order_id":"ce19c40e-fb7e-47e8-81cd-d35e36649013","merchant_order_id":"order-1770053281-6980dea1e74e0","status":"declined"} 
+[2026-02-02 17:47:19] local.INFO: Callback processed successfully {"transaction_id":99,"order_id":"ce1987d5-24ed-4c4b-b5ba-b55299283e7c","merchant_order_id":"order-1770054439-6980e32708d8f","status":"declined"} 
+[2026-02-03 07:49:38] local.INFO: Callback processed successfully {"transaction_id":100,"order_id":"ce197a52-bf7b-41fc-b578-f6bd4f002fbe","merchant_order_id":"order-1770104977-6981a891669c9","status":"declined"} 
+[2026-02-03 09:22:28] local.INFO: Callback processed successfully {"transaction_id":101,"order_id":"ce1966d7-5adb-46af-9108-2dec6a9b9f44","merchant_order_id":"order-1770110547-6981be53a31ca","status":"declined"} 
+[2026-02-03 09:23:41] local.INFO: Callback processed successfully {"transaction_id":102,"order_id":"ce196425-9f7a-42dd-a485-9ada714bc05a","merchant_order_id":"order-1770110620-6981be9cd7cea","status":"declined"} 
+[2026-02-03 12:26:29] local.INFO: Callback processed successfully {"transaction_id":103,"order_id":"ce192d11-ff85-410c-8de4-706f2aee589b","merchant_order_id":"order-1770121527-6981e93742559","status":"approved"} 
+[2026-02-03 14:55:40] local.INFO: Callback processed successfully {"transaction_id":104,"order_id":"ce19736f-4755-4695-a8f9-0f3d0719ad9a","merchant_order_id":"order-1770130505-69820c49a67a2","status":"approved"} 
+[2026-02-03 14:58:57] local.INFO: Callback processed successfully {"transaction_id":105,"order_id":"ce1973b2-a990-40b1-b048-751725df898b","merchant_order_id":"order-1770130696-69820d08492f3","status":"approved"} 
+[2026-02-03 15:03:45] local.INFO: Callback processed successfully {"transaction_id":106,"order_id":"ce19cb49-10bc-4322-ad6c-7571da927352","merchant_order_id":"order-1770131024-69820e50f398c","status":"declined"} 
+[2026-02-04 10:27:55] local.INFO: Callback processed successfully {"transaction_id":107,"order_id":"ce199f8f-3806-4053-a827-04ae3dc15ce7","merchant_order_id":"order-1770200812-69831eec76a04","status":"approved"} 
+[2026-02-06 11:13:44] local.INFO: Callback processed successfully {"transaction_id":108,"order_id":"ce19a52b-4506-48f4-92b4-7cc94b32e962","merchant_order_id":"order-1770376361-6985cca9296d9","status":"approved"} 
+[2026-02-06 11:35:23] local.INFO: Callback processed successfully {"transaction_id":109,"order_id":"ce19d1d3-44fc-4841-a431-14379fd5a8cc","merchant_order_id":"order-1770377660-6985d1bc602e5","status":"approved"} 
+[2026-02-09 09:49:47] local.INFO: Callback processed successfully {"transaction_id":110,"order_id":"ce1954fa-9d1d-420c-978f-7f3ec3cfa04f","merchant_order_id":"order-1770630524-6989ad7c10d37","status":"approved"} 
+[2026-02-09 12:48:54] local.INFO: Callback processed successfully {"transaction_id":112,"order_id":"ce19c70b-1a5b-43f1-ba6b-28ace1e2fa0f","merchant_order_id":"order-1770641271-6989d77717c34","status":"approved"} 
+[2026-02-09 15:14:19] local.INFO: Callback processed successfully {"transaction_id":114,"order_id":"ce196210-bf63-4c74-84a0-33cfb6bd0293","merchant_order_id":"order-1770649996-6989f98c62210","status":"approved"} 
+[2026-02-09 16:38:33] local.INFO: Callback processed successfully {"transaction_id":115,"order_id":"ce1922a2-1417-4b68-b52f-ada70c81a281","merchant_order_id":"order-1770655049-698a0d49a28d6","status":"approved"} 
+[2026-02-11 15:27:52] local.INFO: Callback processed successfully {"transaction_id":116,"order_id":"ce198ce6-52ff-4ab4-a6ee-6d50b0ee5907","merchant_order_id":"order-1770823671-698c9ff7aeef7","status":"declined"} 
+[2026-02-11 15:28:47] local.INFO: Callback processed successfully {"transaction_id":117,"order_id":"ce1943e7-c53a-4edf-b228-ac1e10f51576","merchant_order_id":"order-1770823727-698ca02f1eb7b","status":"declined"} 
+[2026-02-12 11:40:53] local.INFO: Callback processed successfully {"transaction_id":118,"order_id":"ce19cdc2-4a47-41b4-90e6-01b54352b34d","merchant_order_id":"order-1770896452-698dbc44ab9e6","status":"declined"} 
+[2026-02-12 11:52:59] local.INFO: Callback processed successfully {"transaction_id":119,"order_id":"ce19b43a-4337-4e22-a7bc-e32e3679617e","merchant_order_id":"order-1770897179-698dbf1b4da16","status":"declined"} 
+[2026-02-12 11:53:21] local.INFO: Callback processed successfully {"transaction_id":120,"order_id":"ce1924c6-d2f4-4910-a716-45f99f012d00","merchant_order_id":"order-1770897200-698dbf30dd348","status":"declined"} 
+[2026-02-12 15:15:55] local.INFO: Callback processed successfully {"transaction_id":121,"order_id":"ce19c6fa-5a1c-4510-9615-6cf66ebd0768","merchant_order_id":"order-1770909355-698deeab199f3","status":"declined"} 
+[2026-02-12 15:17:27] local.INFO: Callback processed successfully {"transaction_id":122,"order_id":"ce19d999-d116-4a2a-a1ec-471f4610b046","merchant_order_id":"order-1770909417-698deee9264b3","status":"approved"} 
+[2026-02-12 15:18:59] local.INFO: Callback processed successfully {"transaction_id":123,"order_id":"ce1906c3-f0f3-45b6-9cff-86942ba64129","merchant_order_id":"order-1770909538-698def628c1be","status":"declined"} 
+[2026-02-12 15:37:27] local.INFO: Callback processed successfully {"transaction_id":124,"order_id":"ce192286-fb2d-40e1-a0af-4f7fc14fe8b3","merchant_order_id":"order-1770910618-698df39a0ef5d","status":"approved"} 
+[2026-02-12 15:41:52] local.INFO: Callback processed successfully {"transaction_id":125,"order_id":"ce196291-dd05-4d90-b982-01478ed28fde","merchant_order_id":"order-1770910849-698df4811da9b","status":"approved"} 
+[2026-02-12 15:51:54] local.INFO: Callback processed successfully {"transaction_id":126,"order_id":"ce19b068-9ae8-4023-95e5-e838922a9502","merchant_order_id":"order-1770911451-698df6db529f0","status":"approved"} 
+[2026-02-13 08:58:42] local.INFO: Callback processed successfully {"transaction_id":127,"order_id":"ce1965b5-a5ab-4b6a-800a-e2610bc2bcca","merchant_order_id":"order-1770973057-698ee781f3925","status":"approved"} 
+[2026-02-13 09:06:12] local.INFO: Callback processed successfully {"transaction_id":128,"order_id":"ce192336-4a86-4766-8e04-844be001c3ef","merchant_order_id":"order-1770973507-698ee943e93f3","status":"approved"} 
+[2026-02-13 09:27:33] local.INFO: Callback processed successfully {"transaction_id":129,"order_id":"ce19fc40-db39-43a0-aa5b-3b9d9ba847ed","merchant_order_id":"order-1770974790-698eee469cf86","status":"approved"} 
+[2026-02-13 10:23:04] local.INFO: Callback processed successfully {"transaction_id":130,"order_id":"ce194287-2021-4cb2-b0ff-7223f83dd8ef","merchant_order_id":"order-1770978120-698efb48c95e4","status":"approved"} 
+[2026-02-13 15:35:37] local.INFO: Callback processed successfully {"transaction_id":131,"order_id":"ce1987c4-a6f1-49bc-80aa-e70c7b979143","merchant_order_id":"order-1770996874-698f448ac89de","status":"approved"} 
+[2026-02-13 15:50:39] local.INFO: Callback processed successfully {"transaction_id":132,"order_id":"ce199fc7-15e7-4163-9148-f2d68e645cc1","merchant_order_id":"order-1770997776-698f4810acf99","status":"approved"} 
+[2026-02-13 16:03:09] local.INFO: Callback processed successfully {"transaction_id":133,"order_id":"ce19ac63-6583-4eea-948f-9e68cefcf871","merchant_order_id":"order-1770998526-698f4afe70f12","status":"approved"} 
+[2026-02-16 13:12:33] local.INFO: Callback processed successfully {"transaction_id":134,"order_id":"ce190fa7-467c-4536-9379-30f4499e50b2","merchant_order_id":"order-1771247489-69931781ee8c9","status":"approved"} 
+[2026-02-17 09:59:15] local.INFO: Callback processed successfully {"transaction_id":135,"order_id":"ce194508-c3f4-4d8d-be0c-e4c53462c133","merchant_order_id":"order-1771322291-69943bb3eca05","status":"approved"} 
+[2026-02-17 14:07:01] local.INFO: Callback processed successfully {"transaction_id":136,"order_id":"ce1945e2-0ff6-44dd-896a-56e714037961","merchant_order_id":"order-1771337158-699475c624e57","status":"approved"} 
+[2026-02-17 14:35:01] local.INFO: Callback processed successfully {"transaction_id":137,"order_id":"ce195659-3be6-42ce-bf69-43240f0b3e11","merchant_order_id":"order-1771338838-69947c5604ca7","status":"approved"} 
+[2026-02-17 15:32:47] local.INFO: Callback processed successfully {"transaction_id":138,"order_id":"ce190ccc-8669-4e50-84b2-1cf14f24edfd","merchant_order_id":"order-1771342305-699489e11311c","status":"approved"} 
+[2026-02-18 12:18:59] local.INFO: Callback processed successfully {"transaction_id":139,"order_id":"ce19d79a-1be3-4f10-9d8f-928c50ef61d7","merchant_order_id":"order-1771417075-6995adf3bf338","status":"approved"} 
+[2026-02-18 17:13:10] local.INFO: Callback processed successfully {"transaction_id":140,"order_id":"ce1940a3-4724-46e9-a2ae-d86becee442d","merchant_order_id":"order-1771434727-6995f2e7800c2","status":"approved"} 
+[2026-02-19 09:57:48] local.INFO: Callback processed successfully {"transaction_id":141,"order_id":"ce199d8d-7c49-4cdd-923e-d9bd312cfdc2","merchant_order_id":"order-1771495005-6996de5d31dc7","status":"approved"} 
+[2026-02-19 11:28:23] local.INFO: Callback processed successfully {"transaction_id":142,"order_id":"ce19bc48-89dc-4a03-bf72-3bef6f5dfbab","merchant_order_id":"order-1771500439-6996f397d7948","status":"approved"} 
+[2026-02-19 15:27:25] local.INFO: Callback processed successfully {"transaction_id":144,"order_id":"ce19d0c5-cda5-431f-a3fc-3bb43f6c4892","merchant_order_id":"order-1771514782-69972b9e685f1","status":"approved"} 
+[2026-02-19 18:09:30] local.INFO: Callback processed successfully {"transaction_id":145,"order_id":"ce19b240-2318-4db8-9931-ca3345beb744","merchant_order_id":"order-1771524507-6997519b4e361","status":"approved"} 
+[2026-02-20 14:18:17] local.INFO: Callback processed successfully {"transaction_id":146,"order_id":"ce19262a-339e-4207-9b26-e5453b4845ae","merchant_order_id":"order-1771597034-69986cea66b21","status":"approved"} 
+[2026-02-20 14:53:05] local.INFO: Callback processed successfully {"transaction_id":147,"order_id":"ce19be95-e48a-4186-bb1d-169d0e4978a6","merchant_order_id":"order-1771599184-699875509f03a","status":"declined"} 
+[2026-02-20 14:53:43] local.INFO: Callback processed successfully {"transaction_id":148,"order_id":"ce19e5e4-5038-4b0a-97ae-7dc329608f42","merchant_order_id":"order-1771599222-69987576be666","status":"declined"} 
+[2026-02-20 14:58:27] local.INFO: Callback processed successfully {"transaction_id":149,"order_id":"ce19004d-c996-4058-a666-e614702e8451","merchant_order_id":"order-1771599506-69987692a37c7","status":"declined"} 
+[2026-02-20 15:05:48] local.INFO: Callback processed successfully {"transaction_id":150,"order_id":"ce191411-f1a1-4a3f-8866-6f361e4bd944","merchant_order_id":"order-1771599948-6998784c26514","status":"declined"} 
+[2026-02-23 09:11:01] local.INFO: Callback processed successfully {"transaction_id":151,"order_id":"ce191e8e-7a4b-4202-b4c4-366d68c9a6b8","merchant_order_id":"order-1771837861-699c19a53e27d","status":"declined"} 
+[2026-02-23 11:33:17] local.INFO: Callback processed successfully {"transaction_id":152,"order_id":"ce19250c-4648-4b01-adcc-a3ee9af6a00d","merchant_order_id":"order-1771846396-699c3afca50d7","status":"declined"} 
+[2026-02-23 12:10:28] local.INFO: Callback processed successfully {"transaction_id":153,"order_id":"ce19c74c-9406-4d57-8110-d413b861ec98","merchant_order_id":"order-1771848628-699c43b449a8b","status":"declined"} 
+[2026-02-23 13:36:18] local.INFO: Callback processed successfully {"transaction_id":154,"order_id":"ce19ecaa-9b7d-4819-9de9-817ebe249a02","merchant_order_id":"order-1771853777-699c57d19cbf2","status":"declined"} 
+[2026-02-23 13:47:42] local.ERROR: Failed to save transaction after API error {"merchant_order_id":"order-1771854462-699c5a7e17a3e","db_error":"SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect decimal value: 'wd' for column `u666835687_payouts_deb`.`transactions`.`amount` at row 1 (Connection: mysql, SQL: insert into `transactions` (`user_id`, `merchant_order_id`, `order_id`, `operation_id`, `operation_type`, `amount`, `currency`, `status`, `pay_method`, `order_desc`, `merchant_id`, `merchant_custom_data`, `requisites`, `customer_info`, `browser_info`, `error_message`, `error_code`, `finished_at`, `updated_at`, `created_at`) values (88, order-1771854462-699c5a7e17a3e, ?, ?, payout, wd, EUR, failed, sepa, wd, 272, [], {\"account_number\":\"LT603250091700615449\",\"account_name\":\"Erick Righi\",\"customer\":{\"first_name\":\"Erick\",\"last_name\":\"Righi\",\"address\":{\"country\":\"IT\",\"address1\":\"via del giuoco 22 b06065 passignano sul trasimeno pg\"}}}, {\"id\":\"88\",\"email\":\"Erick.Righi@mailer.lu\",\"ip_address\":\"154.57.217.49\",\"browser_info\":{\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/120.0.0.0 Safari\\/537.36\",\"accept_header\":\"text\\/html,application\\/xhtml+xml,application\\/xml;q=0.9,image\\/avif,image\\/webp,image\\/apng,*\\/*;q=0.8\",\"javascript_enabled\":true,\"language\":\"en-US\",\"color_depth\":\"24\",\"timezone\":\"-300\",\"java_enabled\":false,\"screen_height\":1080,\"screen_width\":1920}}, {\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/120.0.0.0 Safari\\/537.36\",\"accept_header\":\"text\\/html,application\\/xhtml+xml,application\\/xml;q=0.9,image\\/avif,image\\/webp,image\\/apng,*\\/*;q=0.8\",\"javascript_enabled\":true,\"language\":\"en-US\",\"color_depth\":\"24\",\"timezone\":\"-300\",\"java_enabled\":false,\"screen_height\":1080,\"screen_width\":1920}, Parameter `amount` is incorrect, 5104, 2026-02-23 13:47:42, 2026-02-23 13:47:42, 2026-02-23 13:47:42))"} 
+[2026-02-23 13:47:53] local.INFO: Callback processed successfully {"transaction_id":155,"order_id":"ce19ae06-f806-4db6-ae23-6500f233b08b","merchant_order_id":"order-1771854473-699c5a890dd5e","status":"declined"} 
+[2026-02-23 13:48:09] local.INFO: Callback processed successfully {"transaction_id":156,"order_id":"ce194b56-e87f-4142-8f6a-85dbe5bc49a9","merchant_order_id":"order-1771854489-699c5a996b5f0","status":"declined"} 
+[2026-02-23 13:51:23] local.INFO: Callback processed successfully {"transaction_id":157,"order_id":"ce192938-6d0f-47d5-93e4-781078b1a7f6","merchant_order_id":"order-1771854682-699c5b5ab7d43","status":"declined"} 
+[2026-02-23 14:04:04] local.INFO: Callback processed successfully {"transaction_id":158,"order_id":"ce192cc6-ad09-4908-9004-cbc46a4423ac","merchant_order_id":"order-1771855443-699c5e53979fb","status":"declined"} 
+[2026-02-23 14:10:50] local.INFO: Callback processed successfully {"transaction_id":159,"order_id":"ce19c5ab-dc8e-46d4-8e41-51858c325a9d","merchant_order_id":"order-1771855849-699c5fe9e967d","status":"declined"} 
+[2026-02-23 15:17:24] local.INFO: Callback processed successfully {"transaction_id":160,"order_id":"ce190f5f-6700-472f-9bab-e3c2623757df","merchant_order_id":"order-1771859843-699c6f83e391e","status":"declined"} 
+[2026-02-23 15:18:44] local.INFO: Callback processed successfully {"transaction_id":161,"order_id":"ce19b937-c54b-47ba-8e0f-11a91f98df40","merchant_order_id":"order-1771859924-699c6fd40b809","status":"declined"} 
+[2026-02-23 15:38:12] local.INFO: Callback processed successfully {"transaction_id":162,"order_id":"ce19755d-c64d-414b-b579-e7bdbbd3d5cd","merchant_order_id":"order-1771861091-699c7463dafa6","status":"declined"} 
+[2026-02-23 15:39:45] local.INFO: Callback processed successfully {"transaction_id":163,"order_id":"ce1960e5-acd1-4133-b69c-c58561f9a1af","merchant_order_id":"order-1771861184-699c74c0cb340","status":"declined"} 
+[2026-02-23 16:07:02] local.INFO: Callback processed successfully {"transaction_id":164,"order_id":"ce194c45-9131-4d2f-af25-20573807e368","merchant_order_id":"order-1771862822-699c7b26071d6","status":"declined"} 
+[2026-02-23 16:08:55] local.INFO: Callback processed successfully {"transaction_id":165,"order_id":"ce190fef-dfb1-4aa5-8474-0ff90258f6e8","merchant_order_id":"order-1771862935-699c7b9745ed4","status":"declined"} 
+[2026-02-23 16:10:08] local.INFO: Callback processed successfully {"transaction_id":166,"order_id":"ce1989f3-a4d1-4c73-9c68-b63c4b6f0922","merchant_order_id":"order-1771863008-699c7be0644d8","status":"declined"} 
+[2026-02-23 17:10:14] local.INFO: Callback processed successfully {"transaction_id":167,"order_id":"ce199606-17ec-4e77-9131-d5b62038fe9a","merchant_order_id":"order-1771866551-699c89b76363f","status":"approved"} 
+[2026-02-23 17:24:01] local.INFO: Callback processed successfully {"transaction_id":168,"order_id":"ce19f1e8-c652-45a6-9380-92171f01fdf3","merchant_order_id":"order-1771867377-699c8cf1f0beb","status":"approved"} 
+[2026-02-24 09:02:56] local.INFO: Callback processed successfully {"transaction_id":169,"order_id":"ce1928ee-16ad-4a26-bd42-6741a2370e92","merchant_order_id":"order-1771923741-699d691d0089a","status":"approved"} 
+[2026-02-26 16:42:22] local.INFO: Callback processed successfully {"transaction_id":170,"order_id":"ce194a3b-03f6-4347-9ee7-4dc8e0753b71","merchant_order_id":"order-1772124079-69a077afaf064","status":"approved"} 
+[2026-02-27 15:05:17] local.INFO: Callback processed successfully {"transaction_id":171,"order_id":"ce198dad-8a57-4b9c-8127-71a07971d16a","merchant_order_id":"order-1772204682-69a1b28a001f8","status":"approved"} 
+[2026-03-02 12:17:31] local.INFO: Callback processed successfully {"transaction_id":172,"order_id":"ce19b792-bda7-483d-a8ab-59aa402febe0","merchant_order_id":"order-1772453816-69a57fb85cb36","status":"approved"} 
+[2026-03-02 17:34:20] local.INFO: Callback processed successfully {"transaction_id":173,"order_id":"ce198597-9a62-4ff6-b4be-779dfff05778","merchant_order_id":"order-1772472797-69a5c9dd79da5","status":"approved"} 
+[2026-03-02 17:51:59] local.INFO: Callback processed successfully {"transaction_id":174,"order_id":"ce191ce8-4d25-4f6c-8a18-376ece69a8e3","merchant_order_id":"order-1772473856-69a5ce00e35cd","status":"approved"} 
+[2026-03-03 18:14:08] local.INFO: Callback processed successfully {"transaction_id":175,"order_id":"ce190f46-e09a-44f2-ae89-e6195331b328","merchant_order_id":"order-1772561585-69a724b137df6","status":"approved"} 
+[2026-03-04 09:35:14] local.INFO: Callback processed successfully {"transaction_id":176,"order_id":"ce196d15-bcdf-4cb9-964d-e0491f4469cb","merchant_order_id":"order-1772616851-69a7fc933c844","status":"approved"} 
+[2026-03-04 10:04:32] local.INFO: Callback processed successfully {"transaction_id":177,"order_id":"ce19cb58-24db-49a6-8421-0a4195b97d98","merchant_order_id":"order-1772618609-69a80371a53a4","status":"approved"} 
+[2026-03-05 16:42:10] local.INFO: Callback processed successfully {"transaction_id":178,"order_id":"ce192e93-3f4e-46f9-9d45-8d2511426689","merchant_order_id":"order-1772728867-69a9b22378dc8","status":"approved"} 
+[2026-03-06 09:34:32] local.INFO: Callback processed successfully {"transaction_id":179,"order_id":"ce19f0d7-1430-410d-a823-a0441c770071","merchant_order_id":"order-1772789608-69aa9f68398d5","status":"approved"} 
+[2026-03-06 10:07:53] local.INFO: Callback processed successfully {"transaction_id":180,"order_id":"ce1997e4-4ddd-40e8-bce5-cd6028237486","merchant_order_id":"order-1772791639-69aaa757c3973","status":"approved"} 
+[2026-03-06 10:32:58] local.INFO: Callback processed successfully {"transaction_id":181,"order_id":"ce19173f-337d-4ca3-bbf7-14875cfe60a4","merchant_order_id":"order-1772793177-69aaad593e504","status":"declined"} 
+[2026-03-06 10:40:11] local.INFO: Callback processed successfully {"transaction_id":182,"order_id":"ce19f54a-99ef-46f5-aec6-39dd20511496","merchant_order_id":"order-1772793576-69aaaee871202","status":"approved"} 
+[2026-03-06 10:44:44] local.INFO: Callback processed successfully {"transaction_id":183,"order_id":"ce19c5cb-25f7-486f-92c9-a652e24cf9bf","merchant_order_id":"order-1772793821-69aaafdd8e118","status":"approved"} 
+[2026-03-06 12:48:38] local.INFO: Callback processed successfully {"transaction_id":185,"order_id":"ce19df55-63b2-4f29-a6bb-72f69c137088","merchant_order_id":"order-1772801309-69aacd1d72d33","status":"declined"} 
+[2026-03-06 12:57:56] local.INFO: Callback processed successfully {"transaction_id":186,"order_id":"ce191da0-8816-413e-b4c1-a50c7ac7271e","merchant_order_id":"order-1772801875-69aacf53ee184","status":"declined"} 
+[2026-03-06 13:22:35] local.INFO: Callback processed successfully {"transaction_id":187,"order_id":"ce19be0d-2e42-4d21-853e-7cee70ab7043","merchant_order_id":"order-1772803354-69aad51ad71d4","status":"declined"} 
+[2026-03-09 09:35:44] local.INFO: Callback processed successfully {"transaction_id":188,"order_id":"ce190eb8-8d09-46ca-8aab-88490f3efec5","merchant_order_id":"order-1773048879-69ae942f8d967","status":"approved"} 
+[2026-03-09 09:44:17] local.INFO: Callback processed successfully {"transaction_id":189,"order_id":"ce19ed81-69e7-40a0-a490-013750082746","merchant_order_id":"order-1773049394-69ae9632394a4","status":"approved"} 
+[2026-03-09 12:29:55] local.INFO: Callback processed successfully {"transaction_id":190,"order_id":"ce19cd5a-20bd-4358-9261-2c8b0fba5dd8","merchant_order_id":"order-1773059357-69aebd1d43e1e","status":"approved"} 
+[2026-03-09 13:52:18] local.INFO: Callback processed successfully {"transaction_id":191,"order_id":"ce19e289-80c5-430b-972b-39b71215f230","merchant_order_id":"order-1773064274-69aed052b862f","status":"approved"} 
+[2026-03-11 09:32:48] local.INFO: Callback processed successfully {"transaction_id":192,"order_id":"ce19c9f2-7bb7-4448-833e-83c3afad728a","merchant_order_id":"order-1773221481-69b1366944bf9","status":"approved"} 
+[2026-03-11 11:12:47] local.INFO: Callback processed successfully {"transaction_id":193,"order_id":"ce19ddc9-cbed-40e4-b491-cc4f03ce60e2","merchant_order_id":"order-1773227503-69b14def5a52d","status":"approved"} 
+[2026-03-11 11:55:38] local.INFO: Callback processed successfully {"transaction_id":194,"order_id":"ce194833-e566-4b88-aad3-042c5369ef10","merchant_order_id":"order-1773230074-69b157fa24642","status":"approved"} 
+[2026-03-12 11:12:44] local.INFO: Callback processed successfully {"transaction_id":195,"order_id":"ce1996e9-9202-41bd-869e-92655224f1f8","merchant_order_id":"order-1773313898-69b29f6a7202f","status":"approved"} 
+[2026-03-13 09:27:36] local.INFO: Callback processed successfully {"transaction_id":196,"order_id":"ce190070-e780-4a24-955a-1ecff98bafd3","merchant_order_id":"order-1773394018-69b3d862ae774","status":"approved"} 
+[2026-03-13 15:42:32] local.INFO: Callback processed successfully {"transaction_id":197,"order_id":"ce19260f-bdf6-49ea-bf32-cd60beaeb767","merchant_order_id":"order-1773416551-69b430676767c","status":"declined"} 
+[2026-03-16 10:03:34] local.INFO: Callback processed successfully {"transaction_id":198,"order_id":"ce19edae-bdb7-4abd-aa13-7d294bb17b57","merchant_order_id":"order-1773655412-69b7d574e04c8","status":"declined"} 
+[2026-03-17 11:26:43] local.INFO: Callback processed successfully {"transaction_id":199,"order_id":"ce19b446-f395-4eda-92ac-41fb4730091d","merchant_order_id":"order-1773746802-69b93a72b75e1","status":"declined"} 
+[2026-03-17 11:31:06] local.INFO: Callback processed successfully {"transaction_id":200,"order_id":"ce19918b-7461-4ed1-bd48-bfe8418d65df","merchant_order_id":"order-1773747066-69b93b7a2242a","status":"declined"} 
+[2026-03-17 15:52:15] local.INFO: Callback processed successfully {"transaction_id":201,"order_id":"ce193f0b-aac1-42eb-a03e-efa893e693b5","merchant_order_id":"order-1773762734-69b978ae3ed50","status":"declined"} 
+[2026-03-17 15:56:21] local.INFO: Callback processed successfully {"transaction_id":202,"order_id":"ce195800-cb3d-46d4-8291-296d2e4aaab5","merchant_order_id":"order-1773762980-69b979a4e2c7e","status":"declined"} 
+[2026-03-17 16:32:20] local.INFO: Callback processed successfully {"transaction_id":203,"order_id":"ce198809-5e57-4afb-92af-812b7e9572f3","merchant_order_id":"order-1773765139-69b9821322dff","status":"declined"} 
+[2026-03-18 08:50:40] local.INFO: Callback processed successfully {"transaction_id":204,"order_id":"ce19ae5c-8814-42fc-89e9-8f1e9771ee6d","merchant_order_id":"order-1773823773-69ba671d4ac78","status":"approved"} 
+[2026-03-18 11:08:23] local.INFO: Callback processed successfully {"transaction_id":205,"order_id":"ce1932b5-0399-4008-a947-51b3205da631","merchant_order_id":"order-1773832035-69ba87638c501","status":"approved"} 
+[2026-03-19 16:28:22] local.INFO: Callback processed successfully {"transaction_id":206,"order_id":"ce199a65-8226-4848-9b3f-f89e73a9b67d","merchant_order_id":"order-1773937636-69bc23e4c7d79","status":"approved"} 
+[2026-03-20 11:05:59] local.INFO: Callback processed successfully {"transaction_id":207,"order_id":"ce1958e6-6efc-4059-935f-dcb8aa3206e0","merchant_order_id":"order-1774004695-69bd29d7303fe","status":"approved"} 
+[2026-03-23 10:47:15] local.INFO: Callback processed successfully {"transaction_id":208,"order_id":"ce1978b0-be9e-41b4-88d5-e8665f9d79f6","merchant_order_id":"order-1774262796-69c11a0c19ff1","status":"approved"} 
+[2026-03-23 11:47:12] local.INFO: Callback processed successfully {"transaction_id":209,"order_id":"ce192d6c-50e6-4cde-b811-f9cc91a235f5","merchant_order_id":"order-1774266368-69c12800353aa","status":"approved"} 
+[2026-03-24 14:24:30] local.INFO: Callback processed successfully {"transaction_id":210,"order_id":"ce1901c0-5e16-41a8-9165-c4136b617295","merchant_order_id":"order-1774362206-69c29e5e4dc6e","status":"approved"} 
+[2026-03-24 14:44:16] local.INFO: Callback processed successfully {"transaction_id":211,"order_id":"ce194e0a-93da-4177-aa98-7c7025c57ca5","merchant_order_id":"order-1774363390-69c2a2fee65ec","status":"approved"} 
+[2026-03-25 16:30:01] local.INFO: Callback processed successfully {"transaction_id":212,"order_id":"ce19b66d-4d0d-435d-aafa-32ec8c36b6d8","merchant_order_id":"order-1774456133-69c40d458daba","status":"approved"} 
+[2026-03-25 17:10:12] local.INFO: Callback processed successfully {"transaction_id":213,"order_id":"ce193174-c50f-4e00-b004-93325395fbe6","merchant_order_id":"order-1774458546-69c416b2ba995","status":"approved"} 
+[2026-03-26 13:00:07] local.INFO: Callback processed successfully {"transaction_id":214,"order_id":"ce198bf2-bc6c-4a1b-b015-d312f1f856b6","merchant_order_id":"order-1774529944-69c52d9817721","status":"approved"} 
+[2026-03-26 15:00:03] local.INFO: Callback processed successfully {"transaction_id":215,"order_id":"ce19d960-bdff-437e-bfbf-484f0dfbf9cc","merchant_order_id":"order-1774537139-69c549b344d19","status":"approved"} 
+[2026-03-26 16:56:46] local.INFO: Callback processed successfully {"transaction_id":216,"order_id":"ce19ec23-995d-4b0f-959f-33dd71eca390","merchant_order_id":"order-1774544141-69c5650dc6160","status":"approved"} 
+[2026-03-27 07:59:22] local.INFO: Callback processed successfully {"transaction_id":217,"order_id":"ce19514d-5a6e-4a98-9d83-14cd41fb6154","merchant_order_id":"order-1774598293-69c638954618f","status":"approved"} 
+[2026-03-27 09:34:18] local.INFO: Callback processed successfully {"transaction_id":218,"order_id":"ce19050c-c198-43fc-87a9-cb7baad222fa","merchant_order_id":"order-1774604022-69c64ef6b2be2","status":"approved"} 
+[2026-03-27 14:41:14] local.INFO: Callback processed successfully {"transaction_id":219,"order_id":"ce19f112-892c-4e84-826b-2228c54d3a1c","merchant_order_id":"order-1774622411-69c696cb291ec","status":"approved"} 
+[2026-03-27 14:55:12] local.INFO: Callback processed successfully {"transaction_id":220,"order_id":"ce194fbb-a85b-40b2-9ae6-a3187c635344","merchant_order_id":"order-1774623241-69c69a0945595","status":"approved"} 
+[2026-03-30 09:28:43] local.INFO: Callback processed successfully {"transaction_id":221,"order_id":"ce194da9-23bf-498b-b764-feae821bb5be","merchant_order_id":"order-1774862857-69ca4209da7a1","status":"approved"} 
+[2026-03-30 10:32:20] local.INFO: Callback processed successfully {"transaction_id":222,"order_id":"ce193990-b245-4fc4-adee-e723bb30186f","merchant_order_id":"order-1774866675-69ca50f3e3275","status":"approved"} 
+[2026-03-30 11:52:57] local.INFO: Callback processed successfully {"transaction_id":223,"order_id":"ce197b31-dab1-4729-ad67-1fefed354402","merchant_order_id":"order-1774871510-69ca63d63d15c","status":"approved"} 
+[2026-03-30 15:27:23] local.INFO: Callback processed successfully {"transaction_id":224,"order_id":"ce19dd54-ff9d-4122-862b-8e577a4ad808","merchant_order_id":"order-1774884374-69ca96166a681","status":"approved"} 
+[2026-03-31 13:48:22] local.INFO: Callback processed successfully {"transaction_id":225,"order_id":"ce193e99-fd3a-4167-b512-3f027aaeda93","merchant_order_id":"order-1774964828-69cbd05c5c5bc","status":"approved"} 
+[2026-03-31 14:02:18] local.INFO: Callback processed successfully {"transaction_id":226,"order_id":"ce19561d-101d-4c5a-a988-2c32a15d6d22","merchant_order_id":"order-1774965674-69cbd3aad2ea8","status":"approved"} 
+[2026-03-31 14:13:22] local.INFO: Callback processed successfully {"transaction_id":227,"order_id":"ce194646-affd-4df6-9030-841c9f95eb28","merchant_order_id":"order-1774966361-69cbd6591316c","status":"approved"} 
+[2026-03-31 14:14:03] local.INFO: Callback processed successfully {"transaction_id":228,"order_id":"ce19475c-fe90-4865-b7fc-5439b4b55732","merchant_order_id":"order-1774966376-69cbd6688980b","status":"approved"} 
+[2026-03-31 14:15:35] local.INFO: Callback processed successfully {"transaction_id":229,"order_id":"ce19fd39-4c4b-4213-8d7f-91b52194157e","merchant_order_id":"order-1774966470-69cbd6c69c0dd","status":"approved"} 
+[2026-03-31 14:42:23] local.INFO: Callback processed successfully {"transaction_id":230,"order_id":"ce194e8e-ecbf-46c7-ac24-cdbe06a93a7e","merchant_order_id":"order-1774968073-69cbdd0974ae1","status":"approved"} 
+[2026-04-01 09:28:53] local.INFO: Callback processed successfully {"transaction_id":231,"order_id":"ce193e52-8204-442d-97fb-f57e3d09608e","merchant_order_id":"order-1775035668-69cce514249be","status":"approved"} 
+[2026-04-01 13:13:29] local.INFO: Callback processed successfully {"transaction_id":232,"order_id":"ce19f849-c93d-48aa-b0b8-e7ee8cb907a1","merchant_order_id":"order-1775049209-69cd19f904607","status":"declined"} 
+[2026-04-01 13:45:11] local.INFO: Callback processed successfully {"transaction_id":233,"order_id":"ca193e2d-4147-4a8e-815b-5c3adb52efcb","merchant_order_id":"order-1775051110-69cd216639b37","status":"declined"} 
+[2026-04-01 13:46:43] local.INFO: Callback processed successfully {"transaction_id":234,"order_id":"ca19eedf-84b4-4e78-85c0-8d183b33eaa8","merchant_order_id":"order-1775051202-69cd21c29962c","status":"declined"} 
+[2026-04-01 13:46:50] local.INFO: Callback processed successfully {"transaction_id":235,"order_id":"ca19c3c7-cae0-4a68-8276-84bfe2cc1baa","merchant_order_id":"order-1775051209-69cd21c9f144f","status":"declined"} 
+[2026-04-02 10:35:55] local.INFO: Callback processed successfully {"transaction_id":236,"order_id":"ce19862c-d9e2-4dad-a795-af21d9176e2d","merchant_order_id":"order-1775126091-69ce464b6bef8","status":"approved"} 
+[2026-04-02 10:38:58] local.INFO: Callback processed successfully {"transaction_id":237,"order_id":"ce19c73d-2310-4450-8079-d7679f8898d5","merchant_order_id":"order-1775126337-69ce4741cc792","status":"declined"} 
+[2026-04-02 12:32:42] local.INFO: Callback processed successfully {"transaction_id":238,"order_id":"ce19280b-0b3d-4f9a-80de-d2d98a9cc16d","merchant_order_id":"order-1775133099-69ce61ab87105","status":"approved"} 
+[2026-04-07 09:43:26] local.INFO: Callback processed successfully {"transaction_id":239,"order_id":"ce195f35-37a4-48de-84db-f21cafff4aec","merchant_order_id":"order-1775554941-69d4d17d6f982","status":"approved"} 
+[2026-04-07 10:49:49] local.INFO: Callback processed successfully {"transaction_id":240,"order_id":"ce194a06-0847-41e9-987c-01577c168a67","merchant_order_id":"order-1775558926-69d4e10e088ac","status":"approved"} 
+[2026-04-07 11:16:18] local.INFO: Callback processed successfully {"transaction_id":241,"order_id":"ce195ad4-cf01-4404-ae2d-ec7ed1f301c2","merchant_order_id":"order-1775560514-69d4e7423500a","status":"approved"} 
+[2026-04-07 14:44:53] local.INFO: Callback processed successfully {"transaction_id":242,"order_id":"ce194c1d-32cf-4db8-a9bd-35692bac1514","merchant_order_id":"order-1775573030-69d518267574d","status":"approved"} 
+[2026-04-07 15:07:14] local.INFO: Callback processed successfully {"transaction_id":243,"order_id":"ce198299-564c-45fc-8f34-87ba1450332c","merchant_order_id":"order-1775574371-69d51d6302cef","status":"approved"} 
+[2026-04-08 11:32:04] local.INFO: Callback processed successfully {"transaction_id":244,"order_id":"ce19fc56-1de0-4432-9c55-4a5f0acfcc43","merchant_order_id":"order-1775647860-69d63c7463ace","status":"approved"} 
+[2026-04-08 14:40:27] local.INFO: Callback processed successfully {"transaction_id":245,"order_id":"ce194a42-0bbe-4b35-93d4-6ccdb240f863","merchant_order_id":"order-1775659152-69d66890a692f","status":"approved"} 
+[2026-04-09 09:54:55] local.INFO: Callback processed successfully {"transaction_id":246,"order_id":"ce19072c-e192-4c5f-9254-6b32b549b74f","merchant_order_id":"order-1775728429-69d7772d1dfaf","status":"approved"} 
+[2026-04-09 10:53:57] local.INFO: Callback processed successfully {"transaction_id":247,"order_id":"ce194b2f-71bc-4056-9b68-4bfbd71d864c","merchant_order_id":"order-1775731973-69d7850568e90","status":"approved"} 
+[2026-04-10 05:00:36] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'payouts'@'localhost' (using password: NO) (Connection: mysql, SQL: select * from `users` where `email` = admin@debitly.com limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'payouts'@'localhost' (using password: NO) (Connection: mysql, SQL: select * from `users` where `email` = admin@debitly.com limit 1) at C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:829)
+[stacktrace]
+#0 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(414): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2913): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2902): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3456): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2901): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(739): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(723): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(333): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\EloquentUserProvider.php(139): Illuminate\\Database\\Eloquent\\Builder->first()
+#10 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php(381): Illuminate\\Auth\\EloquentUserProvider->retrieveByCredentials(Array)
+#11 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php(340): Illuminate\\Auth\\SessionGuard->attempt(Array, false)
+#12 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Auth\\AuthManager->__call('attempt', Array)
+#13 C:\\Interware\\payouts\\app\\Http\\Controllers\\Auth\\LoginController.php(32): Illuminate\\Support\\Facades\\Facade::__callStatic('attempt', Array)
+#14 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\Auth\\LoginController->login(Object(Illuminate\\Http\\Request))
+#15 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('login', Array)
+#16 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Auth\\LoginController), 'login')
+#17 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#18 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#19 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Interware\\payouts\\app\\Http\\Middleware\\RedirectIfAuthenticated.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\RedirectIfAuthenticated->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#30 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#38 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#39 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#40 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#41 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#58 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#59 C:\\Interware\\payouts\\public\\index.php(36): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#60 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Interware\\\\pa...')
+#61 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'payouts'@'localhost' (using password: NO) at C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:65)
+[stacktrace]
+#0 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(65): PDO->__construct('mysql:host=127....', 'payouts', Object(SensitiveParameterValue), Array)
+#1 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(44): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'payouts', '', Array)
+#2 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1339): call_user_func(Object(Closure))
+#6 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1375): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(528): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(423): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(816): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#10 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#11 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(414): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#12 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2913): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#13 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2902): Illuminate\\Database\\Query\\Builder->runSelect()
+#14 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3456): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#15 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2901): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#16 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(739): Illuminate\\Database\\Query\\Builder->get(Array)
+#17 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(723): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#18 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(333): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#19 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\EloquentUserProvider.php(139): Illuminate\\Database\\Eloquent\\Builder->first()
+#20 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php(381): Illuminate\\Auth\\EloquentUserProvider->retrieveByCredentials(Array)
+#21 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php(340): Illuminate\\Auth\\SessionGuard->attempt(Array, false)
+#22 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Auth\\AuthManager->__call('attempt', Array)
+#23 C:\\Interware\\payouts\\app\\Http\\Controllers\\Auth\\LoginController.php(32): Illuminate\\Support\\Facades\\Facade::__callStatic('attempt', Array)
+#24 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\Auth\\LoginController->login(Object(Illuminate\\Http\\Request))
+#25 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('login', Array)
+#26 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Auth\\LoginController), 'login')
+#27 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#28 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#29 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Interware\\payouts\\app\\Http\\Middleware\\RedirectIfAuthenticated.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\RedirectIfAuthenticated->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#40 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#47 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#48 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#49 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#50 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#51 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#66 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#67 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#68 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#69 C:\\Interware\\payouts\\public\\index.php(36): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#70 C:\\Interware\\payouts\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Interware\\\\pa...')
+#71 {main}
+"} 

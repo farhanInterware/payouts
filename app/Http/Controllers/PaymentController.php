@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Transaction;
+use App\Models\User;
 use App\Services\PaymentServiceProvider;
 use App\Services\LoggingService;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class PaymentController extends Controller
 {
@@ -25,27 +28,77 @@ class PaymentController extends Controller
 
     /**
      * Create payout request
+     * 
+     * ALWAYS generates merchant_order_id on backend - never accepts it from frontend.
+     * This ensures uniqueness and prevents frontend manipulation.
+     * Transaction is only created in database after successful API response.
+     * 
+     * @see PaymentController::createPayout() - Transaction creation conditions documented at line 158
      */
     public function createPayout(Request $request)
     {
         $request->validate([
-            'merchant_order_id' => 'required|string|max:128',
             'order_desc' => 'required|string',
             'amount' => 'required|string',
             'currency' => 'required|string|size:3',
             'pay_method' => 'required|string',
-            'customer' => 'required|array',
+            'customer_email' => 'required|email|max:255',
             'requisites' => 'required|array',
             'requisites.customer.address.country' => 'required|string|size:2|regex:/^[A-Z]{2}$/',
         ], [
             'requisites.customer.address.country.regex' => 'Country must be a valid 2-letter ISO code (e.g., GB, US, IT)',
             'requisites.customer.address.country.size' => 'Country must be exactly 2 letters',
+            'customer_email.required' => 'Customer email is required',
+            'customer_email.email' => 'Please enter a valid email address',
         ]);
 
+        // ALWAYS generate unique merchant_order_id on backend - ignore any value sent from frontend
+        // This ensures uniqueness and prevents frontend manipulation
+        $merchantOrderId = $this->generateUniqueMerchantOrderId();
+
+        // Find or create user from customer_email
+        // If user exists (by email), use that user; if not, create a new user
+        // This allows admin to create transactions for any user, and regular users to create for themselves
+        $user = User::firstOrCreate(
+            ['email' => $request->customer_email],
+            [
+                'name' => $request->customer_email, // Use email as name if not provided
+                'password' => Hash::make(Str::random(32)), // Generate random password
+            ]
+        );
+
+        // Get client's real public IP address automatically
+        $ipAddress = $this->getClientIpAddress($request);
+
+        // Build customer data structure for payload and transaction
+        $customerData = [
+            'id' => (string) $user->id,
+            'email' => $user->email,
+            'ip_address' => $ipAddress,
+        ];
+
+        // Prepare transaction data structure for saving (available in all catch blocks)
+        // Transaction is associated with the customer user (found or created), not the admin/user creating it
+        $transactionData = [
+            'user_id' => $user->id, // Use customer user's ID, not the authenticated user's ID
+            'merchant_order_id' => $merchantOrderId,
+            'operation_type' => 'payout',
+            'amount' => $request->amount,
+            'currency' => $request->currency,
+            'pay_method' => $request->pay_method,
+            'order_desc' => $request->order_desc,
+            'merchant_id' => config('payment.merchant_id'),
+            'merchant_custom_data' => $request->merchant_custom_data ?? [],
+            'requisites' => $request->requisites,
+            'customer_info' => $customerData, // Use the customer data we built
+            'browser_info' => $request->browser_info ?? null,
+        ];
+
         try {
+            
             // Build request payload
             $payload = [
-                'merchant_order_id' => $request->merchant_order_id,
+                'merchant_order_id' => $merchantOrderId,
                 'order_desc' => $request->order_desc,
                 'amount' => $request->amount,
                 'currency' => $request->currency,
@@ -60,18 +113,12 @@ class PaymentController extends Controller
                         'back_url' => config('payment.back_url'),
                     ],
                 ],
-                'customer' => $request->customer,
                 'pay_method' => $request->pay_method,
                 'requisites' => $request->requisites,
             ];
 
-            // Get client's real public IP address automatically
-            $ipAddress = $this->getClientIpAddress($request);
-            
-            // Ensure IP address is set in customer data
-            if (!isset($payload['customer']['ip_address']) || empty($payload['customer']['ip_address'])) {
-                $payload['customer']['ip_address'] = $ipAddress;
-            }
+            // Build customer data for payload
+            $payload['customer'] = $customerData;
             
             // Add browser info - use provided or dummy values
             if ($request->has('browser_info') && !empty($request->browser_info)) {
@@ -91,6 +138,10 @@ class PaymentController extends Controller
                 ];
             }
 
+            // Update transactionData customer_info to include browser_info for consistency
+            $transactionData['customer_info'] = $payload['customer'];
+            $transactionData['browser_info'] = $payload['customer']['browser_info'] ?? null;
+
             // Ensure country code is uppercase (ISO codes must be uppercase)
             if (isset($payload['requisites']['customer']['address']['country'])) {
                 $payload['requisites']['customer']['address']['country'] = strtoupper($payload['requisites']['customer']['address']['country']);
@@ -102,8 +153,8 @@ class PaymentController extends Controller
             } else {
                 // Add dummy custom_data if not provided
                 $payload['merchant']['custom_data'] = [
-                    'property1' => 'dummy_value_1',
-                    'property2' => 'dummy_value_2',
+                    'property1' => 'custom_data1',
+                    'property2' => 'custom_data2',
                 ];
             }
 
@@ -123,16 +174,26 @@ class PaymentController extends Controller
             LoggingService::logApiRequest('Payment', '/payout', $signedPayload, 'POST');
             
             // Also log the actual JSON string being sent (for signature debugging)
+            // Check custom_data format in JSON string
+            $customDataStatus = 'not found';
+            if (strpos($signedJson, '"custom_data":{}') !== false) {
+                $customDataStatus = '{} (empty object)';
+            } elseif (strpos($signedJson, '"custom_data":[]') !== false) {
+                $customDataStatus = '[] (empty array - INVALID)';
+            } elseif (preg_match('/"custom_data":\{[^}]*\}/', $signedJson)) {
+                $customDataStatus = '{} (with values)';
+            }
+            
             \Log::channel('api')->info('API Request JSON String - Payment', [
                 'module' => 'Payment',
                 'endpoint' => '/payout',
                 'method' => 'POST',
                 'json_string' => $signedJson,
-                'custom_data_in_json' => strpos($signedJson, '"custom_data":{}') !== false ? '{}' : (strpos($signedJson, '"custom_data":[]') !== false ? '[]' : 'not found'),
+                'custom_data_in_json' => $customDataStatus,
                 'timestamp' => now()->toIso8601String(),
             ]);
             LoggingService::logActivity('Payment', 'create_payout_request', [
-                'merchant_order_id' => $request->merchant_order_id,
+                'merchant_order_id' => $merchantOrderId,
                 'amount' => $request->amount,
                 'currency' => $request->currency,
             ], auth()->id());
@@ -151,10 +212,34 @@ class PaymentController extends Controller
             // Log API response
             LoggingService::logApiResponse('Payment', '/payout', $responseData, $statusCode);
 
-            // Store transaction in database
+            /**
+             * Store transaction in database
+             * 
+             * IMPORTANT: Transaction is ALWAYS created (success or failure):
+             * 1. Validation passes (all required fields are valid)
+             * 2. API call is attempted (success or error)
+             * 3. Transaction saved with status:
+             *    - 'processing' if API returns 200 (success)
+             *    - 'failed' if API returns 4xx/5xx errors or network errors
+             * 
+             * Transaction is NOT created only if:
+             * - Validation fails (before try block) - returns 422 with validation errors
+             * 
+             * Transaction is saved with error details when:
+             * - API returns 4xx client error (ClientException) - saved with error_message and error_code
+             * - API returns 5xx server error (ServerException) - saved with error_message and error_code
+             * - Network/connection errors (Exception) - saved with error_message
+             * 
+             * merchant_order_id is ALWAYS unique:
+             * - Generated using generateUniqueMerchantOrderId() which checks database for uniqueness
+             * - Database has unique constraint on merchant_order_id column
+             * - Prevents duplicate merchant_order_id values
+             * 
+             * This ensures all payment attempts are tracked, whether successful or failed.
+             */
             $transaction = Transaction::create([
-                'user_id' => auth()->id(),
-                'merchant_order_id' => $request->merchant_order_id,
+                'user_id' => $user->id, // Use customer user's ID, not the authenticated user's ID
+                'merchant_order_id' => $merchantOrderId,
                 'order_id' => $responseData['order_id'] ?? null,
                 'operation_id' => $responseData['operation_id'] ?? null,
                 'operation_type' => 'payout',
@@ -166,8 +251,8 @@ class PaymentController extends Controller
                 'merchant_id' => config('payment.merchant_id'),
                 'merchant_custom_data' => $request->merchant_custom_data ?? [],
                 'requisites' => $request->requisites,
-                'customer_info' => $request->customer,
-                'browser_info' => $request->browser_info ?? null,
+                'customer_info' => $payload['customer'], // Use the customer data we built
+                'browser_info' => $payload['customer']['browser_info'] ?? null,
             ]);
 
             // Log transaction creation
@@ -186,14 +271,39 @@ class PaymentController extends Controller
             ]);
 
         } catch (\GuzzleHttp\Exception\ClientException $e) {
-            // Handle API client errors (4xx)
+            // Handle API client errors (4xx) - e.g., invalid address, validation errors
             $statusCode = $e->getResponse()->getStatusCode();
             $responseBody = $e->getResponse()->getBody()->getContents();
             $errorData = json_decode($responseBody, true) ?? ['error' => $responseBody];
             
+            // Save transaction with error details
+            try {
+                $transactionData['status'] = 'failed';
+                $transaction = $this->saveTransactionWithError(
+                    $transactionData,
+                    $errorData['error_message'] ?? 'API client error: ' . $e->getMessage(),
+                    $errorData['error_code'] ?? (string) $statusCode
+                );
+                
+                // Log transaction creation with error
+                LoggingService::logTransaction('created', [
+                    'transaction_id' => $transaction->id,
+                    'merchant_order_id' => $transaction->merchant_order_id,
+                    'status' => $transaction->status,
+                    'error_message' => $transaction->error_message,
+                    'error_code' => $transaction->error_code,
+                ], auth()->id());
+            } catch (\Exception $dbException) {
+                // If saving transaction fails, log it but don't break the error response
+                Log::error('Failed to save transaction after API error', [
+                    'merchant_order_id' => $merchantOrderId,
+                    'db_error' => $dbException->getMessage(),
+                ]);
+            }
+            
             // Log error with API response details (no stack trace)
             LoggingService::logApiError('Payment', '/payout', $e->getMessage(), [
-                'merchant_order_id' => $request->merchant_order_id ?? null,
+                'merchant_order_id' => $merchantOrderId ?? null,
                 'http_status' => $statusCode,
                 'api_error' => $errorData,
                 'file' => $e->getFile(),
@@ -204,6 +314,7 @@ class PaymentController extends Controller
                 'success' => false,
                 'message' => $errorData['error_message'] ?? 'Failed to create payout request',
                 'error_code' => $errorData['error_code'] ?? null,
+                'transaction' => $transaction ?? null,
             ], $statusCode);
             
         } catch (\GuzzleHttp\Exception\ServerException $e) {
@@ -212,8 +323,33 @@ class PaymentController extends Controller
             $responseBody = $e->getResponse()->getBody()->getContents();
             $errorData = json_decode($responseBody, true) ?? ['error' => $responseBody];
             
+            // Save transaction with error details
+            try {
+                $transactionData['status'] = 'failed';
+                $transaction = $this->saveTransactionWithError(
+                    $transactionData,
+                    $errorData['error_message'] ?? 'API server error: ' . $e->getMessage(),
+                    $errorData['error_code'] ?? (string) $statusCode
+                );
+                
+                // Log transaction creation with error
+                LoggingService::logTransaction('created', [
+                    'transaction_id' => $transaction->id,
+                    'merchant_order_id' => $transaction->merchant_order_id,
+                    'status' => $transaction->status,
+                    'error_message' => $transaction->error_message,
+                    'error_code' => $transaction->error_code,
+                ], auth()->id());
+            } catch (\Exception $dbException) {
+                // If saving transaction fails, log it but don't break the error response
+                Log::error('Failed to save transaction after API error', [
+                    'merchant_order_id' => $merchantOrderId,
+                    'db_error' => $dbException->getMessage(),
+                ]);
+            }
+            
             LoggingService::logApiError('Payment', '/payout', $e->getMessage(), [
-                'merchant_order_id' => $request->merchant_order_id ?? null,
+                'merchant_order_id' => $merchantOrderId ?? null,
                 'http_status' => $statusCode,
                 'api_error' => $errorData,
             ]);
@@ -222,12 +358,41 @@ class PaymentController extends Controller
                 'success' => false,
                 'message' => 'Payment API server error',
                 'error_code' => $errorData['error_code'] ?? null,
+                'transaction' => $transaction ?? null,
             ], 500);
             
         } catch (\Exception $e) {
             // Handle other exceptions (network errors, etc.)
+            // Save transaction with error details if we have transaction data
+            $transaction = null;
+            if (isset($transactionData)) {
+                try {
+                    $transactionData['status'] = 'failed';
+                    $transaction = $this->saveTransactionWithError(
+                        $transactionData,
+                        'Network/connection error: ' . $e->getMessage(),
+                        get_class($e)
+                    );
+                    
+                    // Log transaction creation with error
+                    LoggingService::logTransaction('created', [
+                        'transaction_id' => $transaction->id,
+                        'merchant_order_id' => $transaction->merchant_order_id,
+                        'status' => $transaction->status,
+                        'error_message' => $transaction->error_message,
+                        'error_code' => $transaction->error_code,
+                    ], auth()->id());
+                } catch (\Exception $dbException) {
+                    // If saving transaction fails, log it but don't break the error response
+                    Log::error('Failed to save transaction after exception', [
+                        'merchant_order_id' => $merchantOrderId ?? null,
+                        'db_error' => $dbException->getMessage(),
+                    ]);
+                }
+            }
+            
             LoggingService::logApiError('Payment', '/payout', $e->getMessage(), [
-                'merchant_order_id' => $request->merchant_order_id ?? null,
+                'merchant_order_id' => $merchantOrderId ?? null,
                 'exception_type' => get_class($e),
                 'file' => $e->getFile(),
                 'line' => $e->getLine(),
@@ -236,6 +401,7 @@ class PaymentController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'Failed to create payout request: ' . $e->getMessage(),
+                'transaction' => $transaction,
             ], 500);
         }
     }
@@ -678,6 +844,58 @@ class PaymentController extends Controller
             
             return redirect(config('payment.fail_url'))->with('error', 'An error occurred');
         }
+    }
+
+    /**
+     * Generate a unique merchant_order_id
+     * Ensures uniqueness by checking the database
+     */
+    private function generateUniqueMerchantOrderId(): string
+    {
+        $maxAttempts = 10;
+        $attempt = 0;
+        
+        do {
+            $merchantOrderId = 'order-' . time() . '-' . uniqid();
+            $exists = Transaction::where('merchant_order_id', $merchantOrderId)->exists();
+            $attempt++;
+            
+            if ($attempt >= $maxAttempts) {
+                // Fallback: add random string to ensure uniqueness
+                $merchantOrderId = 'order-' . time() . '-' . uniqid() . '-' . bin2hex(random_bytes(4));
+                break;
+            }
+        } while ($exists);
+        
+        return $merchantOrderId;
+    }
+
+    /**
+     * Save transaction to database with error details
+     * Used when API returns errors but we still want to track the transaction
+     */
+    private function saveTransactionWithError(array $data, string $errorMessage = null, string $errorCode = null): Transaction
+    {
+        return Transaction::create([
+            'user_id' => $data['user_id'],
+            'merchant_order_id' => $data['merchant_order_id'],
+            'order_id' => $data['order_id'] ?? null,
+            'operation_id' => $data['operation_id'] ?? null,
+            'operation_type' => $data['operation_type'] ?? 'payout',
+            'amount' => $data['amount'],
+            'currency' => $data['currency'],
+            'status' => $data['status'] ?? 'failed',
+            'pay_method' => $data['pay_method'],
+            'order_desc' => $data['order_desc'],
+            'merchant_id' => $data['merchant_id'] ?? config('payment.merchant_id'),
+            'merchant_custom_data' => $data['merchant_custom_data'] ?? [],
+            'requisites' => $data['requisites'],
+            'customer_info' => $data['customer_info'],
+            'browser_info' => $data['browser_info'] ?? null,
+            'error_message' => $errorMessage,
+            'error_code' => $errorCode,
+            'finished_at' => now(), // Mark as finished since it failed
+        ]);
     }
 
     /**

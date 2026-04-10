@@ -4,8 +4,15 @@
 
 @section('content')
 <div class="page-header">
-    <h2><i class="bi bi-receipt-cutoff me-2"></i>All Transactions</h2>
-    <p class="text-muted mb-0">Manage and monitor all system transactions</p>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+        <div>
+            <h2><i class="bi bi-receipt-cutoff me-2"></i>All Transactions</h2>
+            <p class="text-muted mb-0">Manage and monitor all system transactions</p>
+        </div>
+        <a href="{{ route('admin.transactions.create') }}" class="btn btn-primary">
+            <i class="bi bi-plus-circle me-2"></i>New Transaction
+        </a>
+    </div>
 </div>
 
 <div class="card">

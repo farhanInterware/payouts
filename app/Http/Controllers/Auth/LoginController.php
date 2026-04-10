@@ -11,6 +11,14 @@ class LoginController extends Controller
 {
     public function showLoginForm()
     {
+        // Redirect if already authenticated
+        if (Auth::check()) {
+            if (Auth::user()->isAdmin()) {
+                return redirect()->route('admin.dashboard');
+            }
+            return redirect()->route('user.dashboard');
+        }
+        
         return view('auth.login');
     }
 

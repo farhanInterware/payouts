@@ -10,11 +10,11 @@ return [
     |
     */
 
-    'api_url' => env('PAYMENT_API_URL', 'https://sandbox-api.debitly.tech'),
+    'api_url' => env('PAYMENT_API_URL'),
     
-    'merchant_id' => (int) env('PAYMENT_MERCHANT_ID', 85),
+    'merchant_id' => env('PAYMENT_MERCHANT_ID'),
     
-    'merchant_control_value' => env('PAYMENT_MERCHANT_CONTROL_VALUE', '1ecacb670059bcb7943a9f67da5ccfee441edbc3'),
+    'merchant_control_value' => env('PAYMENT_MERCHANT_CONTROL_VALUE'),
 
     /*
     |--------------------------------------------------------------------------

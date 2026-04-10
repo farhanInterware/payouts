@@ -639,11 +639,6 @@
                                 <i class="bi bi-box-arrow-in-right me-1"></i>Login
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">
-                                <i class="bi bi-person-plus me-1"></i>Register
-                            </a>
-                        </li>
                     @endauth
                 </ul>
             </div>
@@ -665,15 +660,27 @@
                 </li>
                 <li class="sidebar-menu-title">Management</li>
                 <li class="sidebar-menu-item">
-                    <a href="{{ route('admin.users.index') }}" class="sidebar-menu-link {{ request()->routeIs('admin.users.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.users.index') }}" class="sidebar-menu-link {{ request()->routeIs('admin.users.index') || request()->routeIs('admin.users.show') ? 'active' : '' }}">
                         <i class="bi bi-people"></i>
-                        <span>Users</span>
+                        <span>All Users</span>
                     </a>
                 </li>
                 <li class="sidebar-menu-item">
-                    <a href="{{ route('admin.transactions.index') }}" class="sidebar-menu-link {{ request()->routeIs('admin.transactions.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.users.create') }}" class="sidebar-menu-link {{ request()->routeIs('admin.users.create') ? 'active' : '' }}">
+                        <i class="bi bi-person-plus"></i>
+                        <span>Create User</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="{{ route('admin.transactions.index') }}" class="sidebar-menu-link {{ request()->routeIs('admin.transactions.index') || request()->routeIs('admin.transactions.show') ? 'active' : '' }}">
                         <i class="bi bi-receipt-cutoff"></i>
-                        <span>Transactions</span>
+                        <span>All Transactions</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="{{ route('admin.transactions.create') }}" class="sidebar-menu-link {{ request()->routeIs('admin.transactions.create') ? 'active' : '' }}">
+                        <i class="bi bi-plus-circle"></i>
+                        <span>Create Transaction</span>
                     </a>
                 </li>
                 <li class="sidebar-menu-title">Account</li>

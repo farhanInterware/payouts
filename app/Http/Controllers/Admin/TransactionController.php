@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\PaymentController;
 use App\Models\Transaction;
 use App\Services\LoggingService;
 use Illuminate\Http\Request;
@@ -40,6 +41,17 @@ class TransactionController extends Controller
         $transactions = $query->latest()->paginate(15);
 
         return view('admin.transactions.index', compact('transactions'));
+    }
+
+    public function create()
+    {
+        return view('admin.transactions.create');
+    }
+
+    public function store(Request $request)
+    {
+        $paymentController = new PaymentController();
+        return $paymentController->createPayout($request);
     }
 
     public function show($id)
