@@ -57,7 +57,7 @@
         "address1": "17 Main st"
       }
     },
-    "account_number": "IT60X0542811101000000123456",
+    "iban": "IT60X0542811101000000123456",
     "account_name": "Test Name"
   }
 }
@@ -77,7 +77,7 @@
 - ✅ `customer.ip_address`
 - ✅ `customer.browser_info` (auto-collected)
 - ✅ `pay_method`
-- ✅ `requisites.account_number`
+- ✅ `requisites.iban`
 - ✅ `requisites.account_name`
 - ✅ `requisites.customer.first_name`
 - ✅ `requisites.customer.last_name`
@@ -90,7 +90,7 @@
 1. ✅ Basic Information (merchant_order_id, order_desc, amount, currency, pay_method)
 2. ✅ **Merchant Custom Data** (property1, property2) - **NEWLY ADDED**
 3. ✅ Customer Information (id, email, ip_address)
-4. ✅ Requisites (account_number, account_name, customer details, address)
+4. ✅ Requisites (iban, account_name, customer details, address)
 
 ### Browser Info:
 ✅ **Auto-collected** in JavaScript:

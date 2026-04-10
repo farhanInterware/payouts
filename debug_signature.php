@@ -148,7 +148,7 @@ $payload = [
     'pay_method' => 'sepa',
     'requisites' => [
         'account_name' => 'Evan Walls',
-        'account_number' => '254',
+        'iban' => 'IT60X0542811101000000123456',
         'customer' => [
             'address' => [
                 'address1' => '687 Cowley Extension',
@@ -163,15 +163,15 @@ $payload = [
 echo "=== ORIGINAL PAYLOAD ===\n";
 echo json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n\n";
 
-echo "=== EXPECTED SIGNATURE FROM LOG ===\n";
-echo "892a5e8439c291e0310b2cdd6568734b7ad76f577c3d73f5d3519933ba68524b\n\n";
+echo "=== EXPECTED SIGNATURE (requisites.iban; depends on MERCHANT_CONTROL_VALUE) ===\n";
+echo "dbc70f396f3d40cf3956cf9a299371a8d0adbf37fec0dbbb77edd96cbb42a178\n\n";
 
 echo "=== CALCULATED SIGNATURE ===\n";
 $signedJson = sign(json_encode($payload), $merchantControlValue);
 
 $decoded = json_decode($signedJson, true);
 echo "\n=== COMPARISON ===\n";
-echo "Expected:  892a5e8439c291e0310b2cdd6568734b7ad76f577c3d73f5d3519933ba68524b\n";
+echo "Expected:  dbc70f396f3d40cf3956cf9a299371a8d0adbf37fec0dbbb77edd96cbb42a178\n";
 echo "Calculated: " . $decoded['signature'] . "\n";
-echo "Match: " . ($decoded['signature'] === '892a5e8439c291e0310b2cdd6568734b7ad76f577c3d73f5d3519933ba68524b' ? 'YES ✓' : 'NO ✗') . "\n";
+echo "Match: " . ($decoded['signature'] === 'dbc70f396f3d40cf3956cf9a299371a8d0adbf37fec0dbbb77edd96cbb42a178' ? 'YES ✓' : 'NO ✗') . "\n";
 

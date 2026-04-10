@@ -107,7 +107,7 @@ try {
               "bin": 456456,
               "last4": "4321"
             },
-            "account_number": "string",
+            "iban": "string",
             "account_name": "string",
             "bank": {
               "name": "string",

@@ -83,9 +83,9 @@
                     <div class="row g-3 mb-3">
                         <div class="col-12 col-md-6">
                             <label class="form-label fw-semibold">
-                                <i class="bi bi-123 me-1"></i>Account Number <span class="text-danger">*</span>
+                                <i class="bi bi-123 me-1"></i>IBAN <span class="text-danger">*</span>
                             </label>
-                            <input type="text" name="requisites[account_number]" class="form-control" placeholder="Enter account number" required>
+                            <input type="text" name="requisites[iban]" class="form-control" placeholder="Enter IBAN" required>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label fw-semibold">
@@ -175,7 +175,7 @@ $(document).ready(function() {
             pay_method: 'sepa', // Fixed to SEPA
             customer_email: $('input[name="customer_email"]').val(), // Customer email
             requisites: {
-                account_number: $('input[name="requisites[account_number]"]').val(),
+                iban: $('input[name="requisites[iban]"]').val(),
                 account_name: $('input[name="requisites[account_name]"]').val(),
                 customer: {
                     first_name: $('input[name="requisites[customer][first_name]"]').val(),

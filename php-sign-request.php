@@ -114,7 +114,7 @@ try {
             "address1": "17 Main st"
           }
         },
-        "account_number": "IT60X0542811101000000123456",
+        "iban": "IT60X0542811101000000123456",
         "account_name": "Test Name"
       }
     }');

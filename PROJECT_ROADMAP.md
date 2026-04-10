@@ -123,7 +123,7 @@ A complete Laravel application with admin and user panels for managing payment t
     - Customer information: id, email, ip_address
     - Browser info: user_agent, accept_header, javascript_enabled, language, color_depth, timezone, java_enabled, screen_height, screen_width
     - Requisites (based on payment method):
-      - For SEPA: account_number, account_name, customer (first_name, last_name, address)
+      - For SEPA: iban, account_name, customer (first_name, last_name, address)
       - For Card: card details
       - For Bank: bank details
   - Submit button (creates signed request, sends to payout API)

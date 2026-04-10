@@ -34,7 +34,7 @@
   "pay_method": "sepa",
   "requisites": {
     "account_name": "Evan Walls",
-    "account_number": "254",
+    "iban": "IT60X0542811101000000123456",
     "customer": {
       "address": {
         "address1": "687 Cowley Extension",
@@ -44,6 +44,6 @@
       "last_name": "Hardy"
     }
   },
-  "signature": "892a5e8439c291e0310b2cdd6568734b7ad76f577c3d73f5d3519933ba68524b"
+  "signature": "dbc70f396f3d40cf3956cf9a299371a8d0adbf37fec0dbbb77edd96cbb42a178"
 }
 
