@@ -4,7 +4,6 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\PaymentController;
-use App\Models\Transaction;
 use App\Services\LoggingService;
 use Illuminate\Http\Request;
 
@@ -16,23 +15,10 @@ class TransactionController extends Controller
             'filters' => $request->only(['status', 'search']),
         ], auth()->id());
 
-        $query = auth()->user()->transactions()->latest();
-
-        // Filter by status (only if status is provided and not empty)
-        if ($request->filled('status')) {
-            $query->where('status', $request->status);
-        }
-
-        // Search
-        if ($request->filled('search')) {
-            $search = $request->search;
-            $query->where(function($q) use ($search) {
-                $q->where('merchant_order_id', 'like', "%{$search}%")
-                  ->orWhere('order_id', 'like', "%{$search}%");
-            });
-        }
-
-        $transactions = $query->paginate(15);
+        $transactions = auth()->user()->transactions()
+            ->filterList($request, true)
+            ->latest()
+            ->paginate(15);
 
         return view('user.transactions.index', compact('transactions'));
     }

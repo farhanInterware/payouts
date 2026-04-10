@@ -32,6 +32,7 @@
                         <option value="processing" {{ request('status') == 'processing' ? 'selected' : '' }}>Processing</option>
                         <option value="approved" {{ request('status') == 'approved' ? 'selected' : '' }}>Approved</option>
                         <option value="declined" {{ request('status') == 'declined' ? 'selected' : '' }}>Declined</option>
+                        <option value="failed" {{ request('status') == 'failed' ? 'selected' : '' }}>Failed</option>
                     </select>
                 </div>
                 <div class="col-6 col-md-2 d-flex align-items-end">
@@ -85,9 +86,14 @@
                                 <span class="badge bg-light text-dark">{{ $transaction->currency }}</span>
                             </td>
                             <td>
-                                <span class="badge bg-{{ $transaction->status === 'approved' ? 'success' : ($transaction->status === 'declined' ? 'danger' : 'warning') }}">
-                                    <i class="bi bi-{{ $transaction->status === 'approved' ? 'check-circle' : ($transaction->status === 'declined' ? 'x-circle' : 'clock') }} me-1"></i>
-                                    {{ ucfirst($transaction->status) }}
+                                @php
+                                    $st = strtolower($transaction->status ?? '');
+                                    $badge = $st === 'approved' ? 'success' : ($st === 'declined' || $st === 'failed' ? 'danger' : 'warning');
+                                    $icon = $st === 'approved' ? 'check-circle' : ($st === 'declined' || $st === 'failed' ? 'x-circle' : 'clock');
+                                @endphp
+                                <span class="badge bg-{{ $badge }}">
+                                    <i class="bi bi-{{ $icon }} me-1"></i>
+                                    {{ ucfirst($transaction->status ?? '') }}
                                 </span>
                             </td>
                             <td>

@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class Transaction extends Model
 {
@@ -78,6 +81,54 @@ class Transaction extends Model
     public function isDeclined(): bool
     {
         return $this->status === 'declined';
+    }
+
+    /**
+     * Apply index-page filters (status, optional user_id, search on orders + optional related user).
+     */
+    public function scopeFilterList(Builder $query, Request $request, bool $searchRelatedUser = false): Builder
+    {
+        if ($request->filled('user_id')) {
+            $query->where('user_id', $request->user_id);
+        }
+
+        if ($request->filled('status')) {
+            $query->whereRaw('LOWER(status) = ?', [strtolower($request->status)]);
+        }
+
+        if ($request->filled('search')) {
+            $term = trim($request->search);
+            $like = '%'.addcslashes($term, '%_\\').'%';
+            $likeLower = '%'.addcslashes(Str::lower($term), '%_\\').'%';
+            $driver = $query->getConnection()->getDriverName();
+
+            $query->where(function (Builder $q) use ($like, $likeLower, $driver, $searchRelatedUser) {
+                $q->where('merchant_order_id', 'like', $like);
+
+                if ($driver === 'pgsql') {
+                    $q->orWhereRaw('CAST(order_id AS TEXT) ILIKE ?', [$like])
+                        ->orWhereRaw('CAST(operation_id AS TEXT) ILIKE ?', [$like]);
+                } elseif ($driver === 'sqlite') {
+                    $q->orWhereRaw('CAST(order_id AS TEXT) LIKE ?', [$like])
+                        ->orWhereRaw('CAST(operation_id AS TEXT) LIKE ?', [$like]);
+                } else {
+                    $q->orWhere('order_id', 'like', $like)
+                        ->orWhere('operation_id', 'like', $like);
+                }
+
+                // Payout customer email stored on the row (always present for API-created txs)
+                $q->orWhere('customer_info->email', 'like', $like);
+
+                if ($searchRelatedUser) {
+                    $q->orWhereHas('user', function (Builder $uq) use ($likeLower) {
+                        $uq->whereRaw('LOWER(name) LIKE ?', [$likeLower])
+                            ->orWhereRaw('LOWER(email) LIKE ?', [$likeLower]);
+                    });
+                }
+            });
+        }
+
+        return $query;
     }
 }
 
